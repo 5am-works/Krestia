@@ -3,5 +3,5 @@
 open Krestia.Parser.Internals.Dictionary
 
 let dictionary = lexicon {
-   noun "abc"
+   noun "gremi" "sky" ""
 }
