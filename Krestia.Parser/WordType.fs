@@ -1,8 +1,8 @@
 ﻿module Krestia.Parser.WordType
 
 type WordType =
-   | CountableNoun
-   | CountableAssociativeNoun
+   | Noun
+   | AssociativeNoun
    | Verb1
    | Verb2
    | Verb3
@@ -14,8 +14,8 @@ type WordType =
    | Pronoun
    | Modifier
    | Name
-   | TerminalDigit
-   | NonterminalDigit
+   | Digit
+   | Predicate
 
 type Inflection =
    | Definite
