@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Krestia.Parser", "Krestia.Parser\Krestia.Parser.fsproj", "{D4BA2624-6CFF-4B7B-AA1A-B91C72B10990}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Kerstia.Parser.Tests", "Kerstia.Parser.Tests\Kerstia.Parser.Tests.fsproj", "{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{D4BA2624-6CFF-4B7B-AA1A-B91C72B10990}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4BA2624-6CFF-4B7B-AA1A-B91C72B10990}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4BA2624-6CFF-4B7B-AA1A-B91C72B10990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

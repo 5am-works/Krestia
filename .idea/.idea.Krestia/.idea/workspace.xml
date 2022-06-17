@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Internals/Lexicon.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Internals/Lexicon.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Lexicon.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Lexicon.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" afterDir="false" />
-    </list>
+    <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1655355507598</updated>
       <workItem from="1655355507599" duration="7129000" />
-      <workItem from="1655434162235" duration="3757000" />
+      <workItem from="1655434162235" duration="3857000" />
     </task>
     <servers />
   </component>
