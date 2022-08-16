@@ -14,8 +14,10 @@ type WordType =
    | Pronoun
    | Modifier
    | Name
-   | Digit
-   | Predicate
+   | NonTerminalDigit
+   | TerminalDigit
+   | Compound
+   | Keyword
 
 type Inflection =
    | Definite

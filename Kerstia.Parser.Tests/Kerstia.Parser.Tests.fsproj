@@ -8,8 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="LexiconTests.fs" />
-        <Compile Include="Program.fs" />
+        <Compile Include="WordTypeTests.fs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -21,6 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Krestia.Lexicon\Krestia.Lexicon.csproj" />
       <ProjectReference Include="..\Krestia.Parser\Krestia.Parser.fsproj" />
     </ItemGroup>
 
