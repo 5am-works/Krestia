@@ -4,6 +4,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Krestia.Parser", "Krestia.P
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Kerstia.Parser.Tests", "Kerstia.Parser.Tests\Kerstia.Parser.Tests.fsproj", "{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krestia.Lexicon", "Krestia.Lexicon\Krestia.Lexicon.csproj", "{1B3919C2-86C7-4431-9AB9-29A5355B9D7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krestia.Lexicon.Tests", "Krestia.Lexicon.Tests\Krestia.Lexicon.Tests.csproj", "{5F02D6B0-8714-45AD-A570-962D9E707442}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B3919C2-86C7-4431-9AB9-29A5355B9D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B3919C2-86C7-4431-9AB9-29A5355B9D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B3919C2-86C7-4431-9AB9-29A5355B9D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B3919C2-86C7-4431-9AB9-29A5355B9D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F02D6B0-8714-45AD-A570-962D9E707442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F02D6B0-8714-45AD-A570-962D9E707442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F02D6B0-8714-45AD-A570-962D9E707442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F02D6B0-8714-45AD-A570-962D9E707442}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
