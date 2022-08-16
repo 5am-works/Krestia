@@ -8,16 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Lexicon.Tests/Krestia.Lexicon.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Lexicon.Tests/UnitTest1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Lexicon/Krestia.Lexicon.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Lexicon/LexiconLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +22,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fc7e2cea3a1048049709f26b16c6fc0038a00/90/025b4dcd/PascalCaseNamingConvention.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/967970eb58b63e4977b87c01850b7af6afd5431576aa402786bd2d7aee5e95/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser/Internals/Lexicon.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser/Lexicon.fs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -98,7 +92,7 @@
       <workItem from="1660611709505" duration="195000" />
       <workItem from="1660612020403" duration="2330000" />
       <workItem from="1660614737681" duration="374000" />
-      <workItem from="1660618619009" duration="660000" />
+      <workItem from="1660618619009" duration="2600000" />
     </task>
     <servers />
   </component>

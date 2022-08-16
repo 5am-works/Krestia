@@ -8,15 +8,108 @@
       person, and thus does not necessarily refer to a single planet or a part of it.
   - spelling: kuna
     meaning: water
-    gloss: water
+  - spelling: trena
+    meaning: stone (material)
+    gloss: stone
+  - spelling: poski
+    meaning: fire
+  - spelling: duna
+    meaning: sand
+  - spelling: ritma
+    meaning: ash
   - spelling: lite
     meaning: night, nighttime
     gloss: night
+  - spelling: mika
+    meaning: day (24-hour period)
+    gloss: day
+  - spelling: mina
+    meaning: day, daytime
+    gloss: day
+  - spelling: luvema
+    meaning: rain, raindrop
+    gloss: rain
 
 verbs:
   # Swadesh list
   - spelling: litenes
     meaning: to die
     gloss: die
+    context: "{0} dies"
     roots:
       - lite
+  - spelling: luvem
+    meaning: to rain
+    gloss: rain
+    context: "it rains"
+    expanded_form: luvema gimes
+  - spelling: gimet
+    meaning: to fall
+    gloss: fall
+    context: "{0} falls to {1}"
+
+other_words:
+  # Numbers
+  - spelling: mi
+    meaning: 0, significant zero (non-terminal)
+    gloss: 0
+  - spelling: mira
+    meaning: 0, significant zero (terminal)
+    gloss: 0
+  - spelling: po
+    meaning: 1, one (non-terminal)
+    gloss: 1
+  - spelling: pona
+    meaning: 1, one (terminal)
+    gloss: 1
+  - spelling: vo
+    meaning: 2, two (non-terminal)
+    gloss: 2
+  - spelling: vora
+    meaning: 2, two (terminal)
+    gloss: 2
+  - spelling: no
+    meaning: 3, three (non-terminal)
+    gloss: 3
+  - spelling: nona
+    meaning: 3, three (terminal)
+    gloss: 3
+  - spelling: te
+    meaning: 4, four (non-terminal)
+    gloss: 4
+  - spelling: tera
+    meaning: 4, four (terminal)
+    gloss: 4
+  - spelling: si
+    meaning: 5, five (non-terminal)
+    gloss: 5
+  - spelling: sina
+    meaning: 5, five (terminal)
+    gloss: 5
+  - spelling: li
+    meaning: 6, six (non-terminal)
+    gloss: 6
+  - spelling: li
+    meaning: 6, six (terminal)
+    gloss: 6
+  - spelling: so
+    meaning: 7, seven (non-terminal)
+    gloss: 7
+  - spelling: sona
+    meaning: 7, seven (terminal)
+    gloss: 7
+  - spelling: ke
+    meaning: 8, eight (non-terminal)
+    gloss: 8
+  - spelling: kera
+    meaning: 8, eight (terminal)
+    gloss: 8
+  - spelling: gi
+    meaning: 9, nine (non-terminal)
+    gloss: 9
+  - spelling: gina
+    meaning: 9, nine (terminal)
+    gloss: 9
+
+related_words:
+  - [mina, mika]
