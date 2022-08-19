@@ -171,6 +171,10 @@ and private decomposeStep
       |> List.tryPick (tryMatch word requiredWordType)
       |> Option.orElseWith (fun () ->
          baseTypeOf word
+         |> Option.filter (fun wordType ->
+            requiredWordType
+            |> Option.map (List.contains wordType)
+            |> Option.defaultValue true)
          |> Option.map (fun wordType -> (word, wordType, []))))
 
 let decompose word = decomposeStep word None

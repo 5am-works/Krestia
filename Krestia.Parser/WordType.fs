@@ -45,6 +45,9 @@ type Inflection =
    | Reflection1
    | Reflection3
    | Reflection0
+   | Partial1
+   | Partial2
+   | Partial3
    | Quality
    | Uninflectable
    | Prefixed
