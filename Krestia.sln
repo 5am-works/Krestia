@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Krestia.Parser", "Krestia.Parser\Krestia.Parser.fsproj", "{D4BA2624-6CFF-4B7B-AA1A-B91C72B10990}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Kerstia.Parser.Tests", "Kerstia.Parser.Tests\Kerstia.Parser.Tests.fsproj", "{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Krestia.Parser.Tests", "Krestia.Parser.Tests\Krestia.Parser.Tests.fsproj", "{CE977548-4ED9-4747-B68F-C4A56CF3E1E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krestia.Lexicon", "Krestia.Lexicon\Krestia.Lexicon.csproj", "{1B3919C2-86C7-4431-9AB9-29A5355B9D7C}"
 EndProject

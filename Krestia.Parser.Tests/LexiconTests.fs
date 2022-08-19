@@ -1,4 +1,4 @@
-﻿module Kerstia.Parser.Tests.WordTypeTests
+﻿module Krestia.Parser.Tests.WordTypeTests
 
 open Krestia.Lexicon
 open Krestia.Parser.Decompose

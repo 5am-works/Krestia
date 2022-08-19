@@ -1,4 +1,4 @@
-﻿module Kerstia.Parser.Tests.DecomposeTests
+﻿module Krestia.Parser.Tests.DecomposeTests
 
 open NUnit.Framework
 open Krestia.Parser.WordType
