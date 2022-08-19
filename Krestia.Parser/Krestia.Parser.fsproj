@@ -7,7 +7,12 @@
 
     <ItemGroup>
         <Compile Include="WordType.fs" />
+        <Compile Include="Inflections.fs" />
         <Compile Include="Decompose.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Krestia.Lexicon\Krestia.Lexicon.csproj" />
     </ItemGroup>
 
 </Project>

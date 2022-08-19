@@ -3,7 +3,7 @@ using NUnit.Framework;
 namespace Krestia.Lexicon.Tests;
 
 public class Tests {
-   private Lexicon lexicon;
+   private Lexicon lexicon = null!;
 
    [SetUp]
    public void Setup() {

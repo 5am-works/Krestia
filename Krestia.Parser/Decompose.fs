@@ -1,7 +1,8 @@
 ﻿module Krestia.Parser.Decompose
 
 open System
-open WordType
+open Krestia.Parser.Inflections
+open Krestia.Parser.WordType
 
 let private nounEndings =
    [ "pa"
@@ -121,5 +122,55 @@ let private predicates =
      isModifier
      isCompound ]
 
+let private specialPredicates =
+   [ isName
+     isKeyword
+     isPronoun
+     isTerminalDigit
+     isNonTerminalDigit ]
+
+let private standardPredicates =
+   [ isNoun
+     isAssociativeNoun
+     isVerb
+     isModifier
+     isCompound ]
+
 let baseTypeOf word =
    List.tryPick (fun p -> p word) predicates
+
+let rec private tryMatch
+   (word: string)
+   requiredWordType
+   (InflectionRule (baseTypes, inflection, suffix, newType, isTerminal))
+   =
+   if not (word.EndsWith(suffix)) then
+      None
+   elif isTerminal && Option.isSome requiredWordType then
+      None
+   elif Option.map (List.contains newType) requiredWordType
+        |> Option.defaultValue true then
+      let remaining =
+         word.Substring(0, word.Length - suffix.Length)
+
+      decomposeStep remaining (Some baseTypes)
+      |> Option.map (fun (baseWord, wordType, inflections) ->
+         (baseWord, wordType, inflection :: inflections))
+   else
+      None
+
+and private decomposeStep
+   word
+   requiredWordType
+   : (string * WordType * Inflection list) option =
+   specialPredicates
+   |> List.tryPick (fun f -> f word)
+   |> Option.map (fun wordType -> (word, wordType, []))
+   |> Option.orElseWith (fun () ->
+      rules
+      |> List.tryPick (tryMatch word requiredWordType)
+      |> Option.orElseWith (fun () ->
+         baseTypeOf word
+         |> Option.map (fun wordType -> (word, wordType, []))))
+
+let decompose word = decomposeStep word None

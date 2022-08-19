@@ -4,5 +4,7 @@
     &lt;TestId&gt;NUnit3x::5F02D6B0-8714-45AD-A570-962D9E707442::net6.0::Krestia.Lexicon.Tests.Tests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::CE977548-4ED9-4747-B68F-C4A56CF3E1E4::net6.0::Kerstia.Parser.Tests.WordTypeTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::CE977548-4ED9-4747-B68F-C4A56CF3E1E4::net6.0::Kerstia.Parser.Tests.WordTypeTests+WordTypeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::CE977548-4ED9-4747-B68F-C4A56CF3E1E4::net6.0::Kerstia.Parser.Tests.DecomposeTests+DecomposeTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::CE977548-4ED9-4747-B68F-C4A56CF3E1E4::net6.0::Kerstia.Parser.Tests.WordTypeTests+LexiconTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

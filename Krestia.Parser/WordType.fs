@@ -47,3 +47,4 @@ type Inflection =
    | Reflection0
    | Quality
    | Uninflectable
+   | Prefixed

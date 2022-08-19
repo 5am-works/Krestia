@@ -8,16 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Kerstia.Parser.Tests/WordTypeTests.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kerstia.Parser.Tests/DecomposeTests.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kerstia.Parser.Tests/LexiconTests.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Krestia.Lexicon/WordIndex.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kerstia.Parser.Tests/Kerstia.Parser.Tests.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Kerstia.Parser.Tests/Kerstia.Parser.Tests.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kerstia.Parser.Tests/LexiconTests.fs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kerstia.Parser.Tests/Program.fs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kerstia.Parser.Tests/WordTypeTests.fs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Internals/Lexicon.fs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Parser/Krestia.Parser.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Krestia.Parser.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Lexicon.fs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" afterDir="false" />
     </list>
@@ -31,6 +31,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fc7e2cea3a1048049709f26b16c6fc0038a00/90/025b4dcd/PascalCaseNamingConvention.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0994cb284dd9bd5d5a9fc1762dc3c71554e9e67af9b2ce983b73a9a07050/Assert.That.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/967970eb58b63e4977b87c01850b7af6afd5431576aa402786bd2d7aee5e95/Assert.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="JsbtTreeLayoutManager">
@@ -48,21 +50,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "D:\\Packages\\npm\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Packages\\npm\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.Kerstia.Parser.Tests">
     <configuration name="Kerstia.Parser.Tests" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Kerstia.Parser.Tests/bin/Debug/net6.0/Kerstia.Parser.Tests.dll" />
@@ -98,7 +100,8 @@
       <workItem from="1660612020403" duration="2330000" />
       <workItem from="1660614737681" duration="374000" />
       <workItem from="1660618619009" duration="2600000" />
-      <workItem from="1660635515583" duration="4522000" />
+      <workItem from="1660635515583" duration="4930000" />
+      <workItem from="1660867042943" duration="10753000" />
     </task>
     <servers />
   </component>
