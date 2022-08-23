@@ -81,7 +81,17 @@ let rules =
                  verbEach Perfect "io" true
                  verbEach Hypothetical "ia" true
                  verbEach Intention "ela" true
-                 verbEach Desiderative "ila" true
+                 each
+                    [ Verb1
+                      Verb2
+                      Verb3
+                      Verb12
+                      Verb13
+                      Verb23
+                      Verb123 ]
+                    Desiderative
+                    "ila"
+                    true
                  each [ Verb1; Verb12; Verb123; Verb13 ] Imperative "ei" true
                  verbEach Optative "ie" true
                  each [ Verb1; Verb12; Verb123; Verb13 ] Hortative "oa" true

@@ -21,12 +21,14 @@ public class WordController : ControllerBase {
    [Produces(typeof(SearchResponse))]
    public IActionResult Search(string query) {
       var lowercase = query.ToLowerInvariant();
-      var words = _wordIndex.AllWords.AsParallel().Where(word =>
-            word.Spelling.Contains(lowercase) ||
-            word.Meaning.Contains(lowercase))
-         .Select(word => new WordWithMeaning(word.Spelling, word.Meaning));
+      var words =
+         from word in _wordIndex.AllWords.AsParallel()
+         where word.Spelling.Contains(lowercase) ||
+               word.Meaning.Contains(lowercase)
+         orderby Relevance(word, query)
+         select new WordWithMeaning(word.Spelling, word.Meaning);
       return Ok(new SearchResponse {
-         Results = words.OrderBy(word => Relevance(word, query)),
+         Results = words,
       });
    }
 
@@ -41,7 +43,17 @@ public class WordController : ControllerBase {
       return Ok(result.ToWordResponse());
    }
 
-   private static int Relevance(WordWithMeaning word, string query) {
+   [HttpGet("wordlist/alphabetical")]
+   [Produces(typeof(IEnumerable<WordWithMeaning>))]
+   public IActionResult GetAlphabeticalWordList() {
+      var words =
+         from word in _wordIndex.AllWords
+         orderby word.Spelling
+         select new WordWithMeaning(word.Spelling, word.Meaning);
+      return Ok(words);
+   }
+
+   private static int Relevance(Word word, string query) {
       if (word.Spelling == query) return 0;
       if (word.Spelling.StartsWith(query)) return 1;
       if (word.Meaning == query) return 2;

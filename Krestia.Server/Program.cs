@@ -8,6 +8,7 @@ builder.Services.AddControllers().AddJsonOptions(options => {
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddResponseCaching();
 
 var app = builder.Build();
 
@@ -22,6 +23,7 @@ app.UseHttpsRedirection();
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseResponseCaching();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
 

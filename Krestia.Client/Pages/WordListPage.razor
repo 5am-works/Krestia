@@ -1,0 +1,34 @@
+﻿@page "/wordlist"
+@using Krestia.Web.Common
+@inject HttpClient HttpClient
+@if (_words is null) {
+   <p>Loading...</p>
+} else {
+   <p class="centro">The dictionary contains @_words.Count words.</p>
+   <table class="vortlisto">
+      <thead>
+      <tr><th>Word</th><th>Meaning</th></tr>
+      </thead>
+      <tbody>
+      @foreach (var word in _words) {
+         <tr>
+            <td><a href="/word/@word.Spelling">@word.Spelling</a></td>
+            <td>@word.Meaning</td>
+         </tr>
+      }
+      </tbody>
+   </table>
+}
+
+@code {
+   private List<WordWithMeaning>? _words;
+
+   protected override async Task OnAfterRenderAsync(bool firstRender) {
+      if (firstRender) {
+         _words = await HttpClient.GetFromJsonAsync<List<WordWithMeaning>>(
+            "/api/wordlist/alphabetical");
+         StateHasChanged();
+      }
+   }
+
+}
