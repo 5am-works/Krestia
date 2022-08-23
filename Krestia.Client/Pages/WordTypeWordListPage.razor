@@ -1,0 +1,25 @@
+﻿@page "/typedlist"
+@using Krestia.Web.Common
+@inject HttpClient HttpClient
+@if (_results is null) {
+   <p>Loading...</p>
+} else {
+   @foreach (var group in _results) {
+      <h3 class="centro">@group.Key</h3>
+      <WordTable Words="group.Value"/>
+   }
+}
+
+@code {
+   private Dictionary<string, IEnumerable<WordWithMeaning>>? _results;
+
+   protected override async Task OnAfterRenderAsync(bool firstRender) {
+      if (firstRender) {
+         _results = await HttpClient.GetFromJsonAsync
+            <Dictionary<string, IEnumerable<WordWithMeaning>>>(
+               "api/wordlist/wordtype");
+         StateHasChanged();
+      }
+   }
+
+}

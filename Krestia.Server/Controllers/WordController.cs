@@ -1,8 +1,10 @@
 ﻿using System.Text.RegularExpressions;
 using Krestia.Lexicon;
+using Krestia.Parser;
 using Krestia.Server.Utils;
 using Krestia.Web.Common;
 using Microsoft.AspNetCore.Mvc;
+using static Krestia.Server.Utils.ResponseHelper;
 
 namespace Krestia.Server.Controllers;
 
@@ -51,6 +53,21 @@ public class WordController : ControllerBase {
          orderby word.Spelling
          select new WordWithMeaning(word.Spelling, word.Meaning);
       return Ok(words);
+   }
+
+   [HttpGet("wordlist/wordtype")]
+   [Produces(typeof(Dictionary<string, IEnumerable<WordWithMeaning>>))]
+   public IActionResult GetWordTypeWordList() {
+      var words =
+         from word in _wordIndex.AllWords
+         group word by Decompose.baseTypeOf(word.Spelling).Value
+         into wordType
+         select wordType;
+      var results = words.ToDictionary(
+         group => FormatWordType(group.Key),
+         group => group.Select(word =>
+            new WordWithMeaning(word.Spelling, word.Meaning)));
+      return Ok(results);
    }
 
    private static int Relevance(Word word, string query) {

@@ -27,13 +27,13 @@ public static class ResponseHelper {
       };
    }
 
-   private static string FormatWordType(WordType.WordType wordType) {
+   internal static string FormatWordType(WordType.WordType wordType) {
       return wordType.Tag switch {
          WordType.WordType.Tags.Verb0 => "0-verb",
          WordType.WordType.Tags.Verb1 => "1-verb",
          WordType.WordType.Tags.Verb12 => "1-2-verb",
          WordType.WordType.Tags.Verb123 => "1-2-3-verb",
-         WordType.WordType.Tags.Verb13 => "1-3--verb",
+         WordType.WordType.Tags.Verb13 => "1-3-verb",
          WordType.WordType.Tags.Verb2 => "2-verb",
          WordType.WordType.Tags.Verb3 => "3-verb",
          WordType.WordType.Tags.Verb23 => "2-3-verb",

@@ -5,19 +5,7 @@
    <p>Loading...</p>
 } else {
    <p class="centro">The dictionary contains @_words.Count words.</p>
-   <table class="vortlisto">
-      <thead>
-      <tr><th>Word</th><th>Meaning</th></tr>
-      </thead>
-      <tbody>
-      @foreach (var word in _words) {
-         <tr>
-            <td><a href="/word/@word.Spelling">@word.Spelling</a></td>
-            <td>@word.Meaning</td>
-         </tr>
-      }
-      </tbody>
-   </table>
+   <WordTable Words="_words"/>
 }
 
 @code {
