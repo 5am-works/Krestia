@@ -23,8 +23,7 @@ type Inflection =
    | Definite
    | Possession
    | PredicativeIdentity
-   | AttributiveIdentityPrefix
-   | AttributiveIdentityPostfix
+   | AttributiveIdentity
    | Gerund
    | Existence
    | Lone
@@ -41,10 +40,6 @@ type Inflection =
    | Argument3
    | Shift2
    | Shift3
-   | Reflection
-   | Reflection1
-   | Reflection3
-   | Reflection0
    | Partial1
    | Partial2
    | Partial3

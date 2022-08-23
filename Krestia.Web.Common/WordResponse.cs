@@ -1,4 +1,4 @@
-﻿namespace Krestia.Web.Common; 
+﻿namespace Krestia.Web.Common;
 
 public class WordResponse {
    private List<string>? _categories;
@@ -6,7 +6,7 @@ public class WordResponse {
    private readonly List<string>? _roots;
 
    public string Spelling { get; init; } = null!;
-      
+
    public string? Stem { get; init; }
 
    public List<string>? Roots {
@@ -32,15 +32,15 @@ public class WordResponse {
 
    public IEnumerable<string>? Syllables { get; init; }
 
-   public IEnumerable<(string, string)> InflectedForms { get; init; }
+   public IEnumerable<Tuple<string, string>> InflectedForms { get; init; } = null!;
 
    public IEnumerable<string?>? Slots { get; init; }
-      
-   public string? FullMeaning { get; init; }
-      
+
    public string? Syntax { get; init; }
-      
+
    public IEnumerable<string>? CanModifyWordTypes { get; init; }
-      
+
    public IEnumerable<string>? AttachmentInflections { get; init; }
+   
+   public string? ExpandedForm { get; init; }
 }

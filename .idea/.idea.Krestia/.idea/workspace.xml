@@ -12,17 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Krestia.Client/Pages/WordPage.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Server/Controllers/WordController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Server/Utils/ResponseHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Web.Common/WordResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/SearchResults.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Pages/SearchResultsPage.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Client/wwwroot/css/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/wwwroot/css/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/WordPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Pages/WordPage.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Client/wwwroot/css/_vorto.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/wwwroot/css/_vorto.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Server/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Server/Krestia.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Krestia.Server.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Server/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Server/Controllers/WordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Controllers/WordController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Server/Utils/ResponseHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Utils/ResponseHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Web.Common/SearchResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Web.Common/SearchResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Web.Common/WordResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Web.Common/WordResponse.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +36,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fc7e2cea3a1048049709f26b16c6fc0038a00/90/025b4dcd/PascalCaseNamingConvention.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0994cb284dd9bd5d5a9fc1762dc3c71554e9e67af9b2ce983b73a9a07050/Assert.That.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/57a1b763d9c3b55e7d6266c336fc5b97dc3ca0169e7e4d222dd15e81ab64e/JsonSerializerOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/967970eb58b63e4977b87c01850b7af6afd5431576aa402786bd2d7aee5e95/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ca860fea1234fdab4474cfa1911d325a886a3e2e7692197955e531a9eb8e081/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Client/wwwroot/css/app.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" root0="FORCE_HIGHLIGHTING" />
@@ -168,7 +170,7 @@
       <workItem from="1660618619009" duration="2600000" />
       <workItem from="1660635515583" duration="4930000" />
       <workItem from="1660867042943" duration="13183000" />
-      <workItem from="1661211665409" duration="6983000" />
+      <workItem from="1661211665409" duration="13366000" />
     </task>
     <servers />
   </component>

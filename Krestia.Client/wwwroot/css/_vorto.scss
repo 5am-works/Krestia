@@ -18,15 +18,15 @@ h2.vorto {
 
 .inflekcio-tabelo {
    padding: 3px;
-   border: #343A40 solid 2px;
+   border: $neĝo solid 2px;
 
    thead tr th {
-      border-bottom: #343A40 solid 1px;
+      border-bottom: $neĝo70 solid 1px;
    }
 
    tbody tr {
       &:nth-child(even) {
-         background-color: lightgray;
+         background-color: $neĝo15;
       }
    }
 

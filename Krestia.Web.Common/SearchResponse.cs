@@ -21,8 +21,8 @@ public class SearchResponse {
 }
 
 public readonly struct WordWithMeaning {
-   public string Spelling { get; }
-   public string Meaning { get; }
+   public string Spelling { get; init; }
+   public string Meaning { get; init; }
 
    public WordWithMeaning(string spelling, string meaning) {
       Spelling = spelling;

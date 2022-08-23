@@ -4,36 +4,61 @@
 @inject HttpClient HttpClient
 @inject ILogger<WordPage> Logger
 <div>
-    @if (Error is not null) {
-        <p>@Error</p>
-    } else if (Result is null) {
-        <p>Loading...</p>
-    } else {
-        <h2 class="vorto">@Result.Spelling</h2>
-        <div class="streko"></div>
-        <p class="vorttipo">@Result.WordType</p>
-        <p>@Result.Meaning</p>
-    }
+   @if (Error is not null) {
+      <p>@Error</p>
+   } else if (Result is null) {
+      <p>Loading...</p>
+   } else {
+      <h2 class="vorto">@Result.Spelling</h2>
+      <div class="streko"></div>
+      <p class="vorttipo">@Result.WordType</p>
+      <p>@Result.Meaning</p>
+      @if (Result.Syntax is not null) {
+         <p>In context: @((MarkupString)string.Format(Result.Syntax, "a<sub>1</sub>", "a<sub>2</sub>", "a<sub>3</sub>"))</p>
+      }
+      @if (Result.ExpandedForm is not null) {
+         <p>Expanded form: @Result.ExpandedForm</p>
+      }
+      @if (Result.InflectedForms.Any()) {
+         <h3>Inflected forms</h3>
+         <table class="inflekcio-tabelo">
+            <thead>
+            <tr>
+               <th>Inflection</th><th>Inflected form</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var (inflection, form) in Result.InflectedForms) {
+               <tr>
+                  <td>@inflection</td><td>@form</td>
+               </tr>
+            }
+            </tbody>
+         </table>
+      }
+   }
 </div>
 
 @code {
 
-    [Parameter]
-    public string Word { get; set; } = null!;
+   [Parameter]
+   public string Word { get; set; } = null!;
 
-    private WordResponse? Result { get; set; }
-    private string? Error { get; set; }
+   private WordResponse? Result { get; set; }
+   private string? Error { get; set; }
 
-    protected override async Task OnParametersSetAsync() {
-        try {
-            Result = await HttpClient.GetFromJsonAsync<WordResponse>($"/api/word/{Word}");
-        } catch (HttpRequestException e) {
-            if (e.StatusCode == HttpStatusCode.NotFound) {
-                Error = $"Word not found: {Word}";
-            } else {
-                Error = $"An error occurred while fetching {Word}";
-                Logger.LogError(e, null);
-            }
-        }
-    }
+   protected override async Task OnParametersSetAsync() {
+      try {
+         Result = await HttpClient.GetFromJsonAsync<WordResponse>(
+            $"/api/word/{Word}");
+      } catch (HttpRequestException e) {
+         if (e.StatusCode == HttpStatusCode.NotFound) {
+            Error = $"Word not found: {Word}";
+         } else {
+            Error = $"An error occurred while fetching {Word}";
+            Logger.LogError(e, null);
+         }
+      }
+   }
+
 }
