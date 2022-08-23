@@ -12,7 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Krestia.Web.Common/SearchResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/App.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/App.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Krestia.Client.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Krestia.Client.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/Counter.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/FetchData.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/Index.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Shared/MainLayout.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Shared/MainLayout.razor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Shared/NavMenu.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Shared/NavMenu.razor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Shared/SurveyPrompt.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/wwwroot/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Web.Common/Class1.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +40,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0994cb284dd9bd5d5a9fc1762dc3c71554e9e67af9b2ce983b73a9a07050/Assert.That.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/967970eb58b63e4977b87c01850b7af6afd5431576aa402786bd2d7aee5e95/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Krestia.Client/wwwroot/css/app.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -157,7 +171,7 @@
       <workItem from="1660618619009" duration="2600000" />
       <workItem from="1660635515583" duration="4930000" />
       <workItem from="1660867042943" duration="13183000" />
-      <workItem from="1661211665409" duration="2347000" />
+      <workItem from="1661211665409" duration="3371000" />
     </task>
     <servers />
   </component>
