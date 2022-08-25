@@ -12,14 +12,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Krestia.Client/Pages/WordTypeWordListPage.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Client/Shared/WordTable.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/Homepage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Pages/Homepage.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/WordListPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Pages/AlphabeticalWordListPage.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Client/wwwroot/css/_vorttabelo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/wwwroot/css/_vorttabelo.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Server/Controllers/WordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Controllers/WordController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Server/Utils/ResponseHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Utils/ResponseHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +34,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/57a1b763d9c3b55e7d6266c336fc5b97dc3ca0169e7e4d222dd15e81ab64e/JsonSerializerOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/967970eb58b63e4977b87c01850b7af6afd5431576aa402786bd2d7aee5e95/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a8b3625d2e2e1ca3cdb5e35a44c6eaa5634d969bd2a1ce6bdb9052bf64309ca1/option.fs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ca860fea1234fdab4474cfa1911d325a886a3e2e7692197955e531a9eb8e081/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/df71358f7b7337a1eee3a65abe6d678dd9a065e256b8cc3fd44a2949754/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Client/wwwroot/css/app.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" root0="FORCE_HIGHLIGHTING" />
@@ -169,7 +170,8 @@
       <workItem from="1660867042943" duration="13183000" />
       <workItem from="1661211665409" duration="13766000" />
       <workItem from="1661292514891" duration="1255000" />
-      <workItem from="1661294879353" duration="3545000" />
+      <workItem from="1661294879353" duration="9126000" />
+      <workItem from="1661465152847" duration="882000" />
     </task>
     <servers />
   </component>

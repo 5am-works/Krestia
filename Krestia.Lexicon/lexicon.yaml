@@ -40,6 +40,90 @@
     meaning: rain, raindrop
     gloss: rain
 
+  - spelling: lurika
+    meaning: cloud
+
+  - spelling: seskoma
+    meaning: snow, snowflake
+
+  - spelling: gelume
+    meaning: air, atmosphere
+
+  - spelling: belime
+    meaning: wind
+    roots: [ bep, gelume ]
+
+  - spelling: luna
+    meaning: the sun
+    roots: [ lunata ]
+
+  - spelling: lunata
+    meaning: star
+    remarks: >
+      This word specifically refers to astronomical objects, not people.
+
+  - spelling: gremi
+    meaning: sky
+    roots: [ grema ]
+
+  - spelling: temita
+    meaning: mountain, hill
+    gloss: mountain
+
+  - spelling: kunata
+    meaning: ocean, sea
+    gloss: ocean
+    roots: [ kuna ]
+  
+  - spelling: tatrete
+    meaning: person, human
+  
+  - spelling: breka
+    meaning: male
+    
+  - spelling: grike
+    meaning: female
+  
+  - spelling: tote
+    meaning: child
+  
+  - spelling: grita
+    meaning: girl
+    expanded_form: tote grikel
+  
+  - spelling: breta
+    meaning: boy
+    expanded_form: tote brekal
+  
+  - spelling: rone
+    meaning: here
+    remarks: Refers to the location of the speaker
+  
+  - spelling: prine
+    meaning: away from here
+    remarks: Refers to anywhere where the speaker is not
+
+associative_nouns:
+  - spelling: todri
+    meaning: parent of
+
+  - spelling: bodri
+    meaning: father of
+    expanded_form: todri brekal
+
+  - spelling: gedri
+    meaning: mother of
+    expanded_form: todri grikel
+
+  - spelling: ligri
+    meaning: name of
+  
+  - spelling: krite
+    meaning: this
+  
+  - spelling: prete
+    meaning: that
+
 verbs:
   # Swadesh list
   - spelling: litenes
@@ -53,12 +137,92 @@ verbs:
     meaning: to rain
     gloss: rain
     context: "it rains"
-    expanded_form: gimesaam luvema
-    
+    expanded_form: gimesraam luvema
+
   - spelling: gimet
     meaning: to fall
     gloss: fall
     context: "{0} falls to {1}"
+
+  - spelling: seskom
+    meaning: to snow
+    gloss: snow
+    context: "it snows"
+    expanded_form: gimesraam seskoma
+
+  - spelling: bep
+    meaning: to move
+    gloss: move
+    context: "{0} moves {1} to {2}"
+  
+  - spelling: delat
+    meaning: to be equal to
+    gloss: equal
+    context: "{0} is equal to {1}"
+  
+  - spelling: liret
+    meaning: to be named
+    context: "{0} has the name {1}/{0} is called {1}"
+  
+  - spelling: lerat
+    meaning: to go
+    context: "{0} goes to {1}"
+  
+  - spelling: lemos
+    meaning: to come
+    context: "{0} comes"
+    expanded_form: eratros rone
+    remarks: >
+      Refers to going to the location of the speaker. For other places, use
+      "erat" instead.
+      
+  - spelling: metet
+    meaning: to stand
+    context: "{0} is standing at/on {1}"
+  
+  - spelling: volot
+    meaning: to sit
+    context: "{0} is sitting at/on {1}"
+  
+  - spelling: geset
+    meaning: to lie down, to lay
+    gloss: lie
+    context: "{0} is laying down at/on {1}"
+  
+  - spelling: livet
+    meaning: to look at
+    gloss: look
+    context: "{0} looks at {1}"
+  
+  - spelling: verot
+    meaning: to listen to
+    gloss: listen
+    context: "{0} listens to {1}"
+  
+  - spelling: demit
+    meaning: to play, to have fun
+    gloss: play
+    context: "{0} plays {1}"
+  
+  - spelling: belep
+    meaning: to give
+    context: "{0} gives {1} to {2}"
+    
+  - spelling: merit
+    meaning: to know, to be familiar with
+    context: "{0} knows about {1}"
+  
+  - spelling: bup
+    meaning: to speak, to say
+    context: "{0} says {1} to {2}"
+  
+  - spelling: tesip
+    meaning: to push, to press
+    context: "{0} pushes/presses {1} against/towards {2}"
+    
+  - spelling: posip
+    meaning: to pull, to draw
+    context: "{0} pulls/draws {1} away from {2}"
 
 other_words:
   # Numbers
@@ -141,6 +305,41 @@ other_words:
   - spelling: gina
     meaning: 9, nine (terminal)
     gloss: 9
+  
+  - spelling: hem
+    meaning: I (first-person pronoun)
+    gloss: 1PS
+    expanded_form: emika sil
+  
+  - spelling: hes
+    meaning: you (second-person singular pronoun)
+    gloss: 2PS
+    expanded_form: esika sil
+  
+  - spelling: het
+    meaning: he, she, it, they (singular) (third-person singular pronoun)
+    gloss: 3PS
+    expanded_form: etika sil
+    
+  - spelling: hime
+    meaning: we (first-person pronoun)
+    gloss: 1PP
+    expanded_form: emika vel
+
+  - spelling: hise
+    meaning: you (second-person plural pronoun)
+    gloss: 2PP
+    expanded_form: esika vel
+
+  - spelling: hite
+    meaning: they (third-person plural pronoun)
+    gloss: 3PP
+    expanded_form: etika vel
 
 related_words:
-  - [mina, mika]
+  - [ mina, mika ]
+  - [ hem, hime, emika ]
+  - [ hes, hise, esika ]
+  - [ het, hite, etika ]
+  - [ posip, tesip ]
+  - [ rone, prine ]

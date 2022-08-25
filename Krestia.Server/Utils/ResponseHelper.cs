@@ -27,6 +27,25 @@ public static class ResponseHelper {
       };
    }
 
+   public static string WordCategory(this Word word) {
+      var wordType = baseTypeOf(word.Spelling).Value;
+      return wordType.Tag switch {
+         WordType.WordType.Tags.Verb0 => "Verbs",
+         WordType.WordType.Tags.Verb1 => "Verbs",
+         WordType.WordType.Tags.Verb2 => "Verbs",
+         WordType.WordType.Tags.Verb3 => "Verbs",
+         WordType.WordType.Tags.Verb12 => "Verbs",
+         WordType.WordType.Tags.Verb13 => "Verbs",
+         WordType.WordType.Tags.Verb23 => "Verbs",
+         WordType.WordType.Tags.Verb123 => "Verbs",
+         WordType.WordType.Tags.Noun => "Nouns",
+         WordType.WordType.Tags.AssociativeNoun => "Nouns",
+         WordType.WordType.Tags.TerminalDigit => "Digits",
+         WordType.WordType.Tags.NonTerminalDigit => "Digits",
+         _ => FormatWordType(wordType) + "s",
+      };
+   }
+
    internal static string FormatWordType(WordType.WordType wordType) {
       return wordType.Tag switch {
          WordType.WordType.Tags.Verb0 => "0-verb",

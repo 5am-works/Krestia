@@ -12,11 +12,11 @@ public class Word {
    public string Spelling { get; set; } = null!;
    public string Meaning { get; set; } = null!;
    public string? Gloss { get; set; }
+   public string? ExpandedForm { get; set; }
    public List<string> Roots { get; set; } = new();
    public string? Remarks { get; set; }
 }
 
 public class Verb : Word {
    public string Context { get; set; } = null!;
-   public string? ExpandedForm { get; set; }
 }

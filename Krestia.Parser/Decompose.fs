@@ -47,6 +47,13 @@ let terminalDigits =
      "gina" ]
    |> Set.ofList
 
+let uninflectableWordTypes =
+   [ Pronoun
+     TerminalDigit
+     NonTerminalDigit
+     Name ]
+   |> Set.ofList
+
 let isNoun (word: string) =
    nounEndings
    |> List.tryFind word.EndsWith
@@ -154,6 +161,8 @@ let rec private tryMatch
          word.Substring(0, word.Length - suffix.Length)
 
       decomposeStep remaining (Some baseTypes)
+      |> Option.filter (fun (_, wordType, _) ->
+         not <| Set.contains wordType uninflectableWordTypes)
       |> Option.map (fun (baseWord, wordType, inflections) ->
          (baseWord, wordType, inflection :: inflections))
    else

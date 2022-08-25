@@ -60,11 +60,11 @@ public class WordController : ControllerBase {
    public IActionResult GetWordTypeWordList() {
       var words =
          from word in _wordIndex.AllWords
-         group word by Decompose.baseTypeOf(word.Spelling).Value
+         group word by word.WordCategory()
          into wordType
          select wordType;
       var results = words.ToDictionary(
-         group => FormatWordType(group.Key),
+         group => group.Key,
          group => group.Select(word =>
             new WordWithMeaning(word.Spelling, word.Meaning)));
       return Ok(results);
