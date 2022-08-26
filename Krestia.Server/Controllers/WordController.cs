@@ -1,10 +1,12 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Collections.Immutable;
+using System.Text.RegularExpressions;
 using Krestia.Lexicon;
 using Krestia.Parser;
 using Krestia.Server.Utils;
 using Krestia.Web.Common;
 using Microsoft.AspNetCore.Mvc;
-using static Krestia.Server.Utils.ResponseHelper;
+using Microsoft.FSharp.Collections;
+using Microsoft.FSharp.Core;
 
 namespace Krestia.Server.Controllers;
 
@@ -23,6 +25,8 @@ public class WordController : ControllerBase {
    [Produces(typeof(SearchResponse))]
    public IActionResult Search(string query) {
       var lowercase = query.ToLowerInvariant();
+      var decomposedResults = DecomposeWords(query);
+
       var words =
          from word in _wordIndex.AllWords.AsParallel()
          where word.Spelling.Contains(lowercase) ||
@@ -30,7 +34,8 @@ public class WordController : ControllerBase {
          orderby Relevance(word, query)
          select new WordWithMeaning(word.Spelling, word.Meaning);
       return Ok(new SearchResponse {
-         Results = words,
+         Results = words.ToList(),
+         DecomposedResults = decomposedResults.ToList(),
       });
    }
 
@@ -68,6 +73,25 @@ public class WordController : ControllerBase {
          group => group.Select(word =>
             new WordWithMeaning(word.Spelling, word.Meaning)));
       return Ok(results);
+   }
+
+   private IEnumerable<DecomposedResult?> DecomposeWords(string query) {
+      var words = query.Split(' ');
+
+      foreach (var word in words) {
+         var result = Decompose.decompose(word);
+         DecomposedResult? decomposedResult;
+         try {
+            var (baseWord, _, steps) = result.Value;
+            var dictionaryEntry = _wordIndex.Find(baseWord);
+            decomposedResult = new DecomposedResult(word, dictionaryEntry?.Gloss, baseWord,
+               steps.Select(ResponseHelper.FormatInflectionStep).ToList());
+         } catch (NullReferenceException) {
+            decomposedResult = new DecomposedResult(word);
+         }
+
+         yield return decomposedResult;
+      }
    }
 
    private static int Relevance(Word word, string query) {

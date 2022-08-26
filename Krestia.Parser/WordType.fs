@@ -46,3 +46,7 @@ type Inflection =
    | Quality
    | Uninflectable
    | Prefixed
+
+type VerbAttribute =
+   | Negation
+   | Capacity

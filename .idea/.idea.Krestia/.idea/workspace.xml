@@ -13,12 +13,12 @@
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/SearchResultsPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Pages/SearchResultsPage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Server/Controllers/WordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Controllers/WordController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Server/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Server/Utils/ResponseHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Utils/ResponseHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Web.Common/SearchResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Web.Common/SearchResponse.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,21 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Packages\\npm\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Packages\\npm\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Krestia.Server: IIS Express">
     <configuration name="Kerstia.Parser.Tests" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Kerstia.Parser.Tests/bin/Debug/net6.0/Kerstia.Parser.Tests.dll" />
@@ -171,7 +171,8 @@
       <workItem from="1661211665409" duration="13766000" />
       <workItem from="1661292514891" duration="1255000" />
       <workItem from="1661294879353" duration="9126000" />
-      <workItem from="1661465152847" duration="882000" />
+      <workItem from="1661465152847" duration="2576000" />
+      <workItem from="1661473761719" duration="4775000" />
     </task>
     <servers />
   </component>

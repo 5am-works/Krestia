@@ -27,7 +27,7 @@ public static class ResponseHelper {
       };
    }
 
-   public static string WordCategory(this Word word) {
+   internal static string WordCategory(this Word word) {
       var wordType = baseTypeOf(word.Spelling).Value;
       return wordType.Tag switch {
          WordType.WordType.Tags.Verb0 => "Verbs",
@@ -46,7 +46,39 @@ public static class ResponseHelper {
       };
    }
 
-   internal static string FormatWordType(WordType.WordType wordType) {
+   internal static string FormatInflectionStep(WordType.Inflection inflection) {
+      return inflection.Tag switch {
+         WordType.Inflection.Tags.Argument1 => "A1",
+         WordType.Inflection.Tags.Argument2 => "A2",
+         WordType.Inflection.Tags.Argument3 => "A3",
+         WordType.Inflection.Tags.Definite => "DEF",
+         WordType.Inflection.Tags.Desiderative => "DES",
+         WordType.Inflection.Tags.Existence => "EXS",
+         WordType.Inflection.Tags.Gerund => "GER",
+         WordType.Inflection.Tags.Hortative => "HOR",
+         WordType.Inflection.Tags.Hypothetical => "HYP",
+         WordType.Inflection.Tags.Imperative => "IMP",
+         WordType.Inflection.Tags.Intention => "INT",
+         WordType.Inflection.Tags.Lone => "LON",
+         WordType.Inflection.Tags.Optative => "OPT",
+         WordType.Inflection.Tags.Partial1 => "P1",
+         WordType.Inflection.Tags.Partial2 => "P2",
+         WordType.Inflection.Tags.Partial3 => "P3",
+         WordType.Inflection.Tags.Perfect => "PER",
+         WordType.Inflection.Tags.Possession => "POS",
+         WordType.Inflection.Tags.Prefixed => "PRE",
+         WordType.Inflection.Tags.Progressive => "PRO",
+         WordType.Inflection.Tags.Quality => "QUA",
+         WordType.Inflection.Tags.Shift2 => "S2",
+         WordType.Inflection.Tags.Shift3 => "S3",
+         WordType.Inflection.Tags.AttributiveIdentity => "AID",
+         WordType.Inflection.Tags.PredicativeIdentity => "PID",
+         _ => throw new ArgumentOutOfRangeException(
+            $"Invalid inflection: {inflection}"),
+      };
+   }
+
+   private static string FormatWordType(WordType.WordType wordType) {
       return wordType.Tag switch {
          WordType.WordType.Tags.Verb0 => "0-verb",
          WordType.WordType.Tags.Verb1 => "1-verb",
