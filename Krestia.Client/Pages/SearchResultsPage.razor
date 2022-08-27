@@ -11,29 +11,27 @@
 } else if (Results.IsEmpty) {
    <p>No results for @(Input).</p>
 } else {
-   if (Results.DecomposedResults.Any()) {
+   if (Results.DecomposedResults.Any(result => !result.IsEmpty)) {
       <p>Gloss result for "@Input":</p>
       <div>
          <table class="gloso-tabelo">
             <thead>
             <tr>
-               <th>Word</th><th>Gloss</th><th>Base word</th><th>Inflections</th>
+               <th>Word</th><th>Base word</th><th>Inflections</th><th>Gloss</th>
             </tr>
             </thead>
             <tbody>
             @foreach (var result in Results.DecomposedResults) {
-               if (result.HasValue) {
-                  <tr>
-                     <td>@result.Value.SearchedWord</td>
-                     <td>@result.Value.Meaning</td>
-                     <td>
-                        <a href=@($"/word/{result.Value.BaseWord}")>@result.Value.BaseWord</a>
-                     </td>
-                     <td>
-                        @(string.Join("-", result.Value.Steps))
-                     </td>
-                  </tr>
-               }
+               <tr>
+                  <td>@result.SearchedWord</td>
+                  <td>
+                     <a href=@($"/word/{result.BaseWord}")>@result.BaseWord</a>
+                  </td>
+                  <td>
+                     @(string.Join("-", result.Steps))
+                  </td>
+                  <td>@result.Meaning</td>
+               </tr>
             }
             </tbody>
          </table>

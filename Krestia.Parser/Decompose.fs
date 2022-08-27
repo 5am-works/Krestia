@@ -4,6 +4,12 @@ open System
 open Krestia.Parser.Inflections
 open Krestia.Parser.WordType
 
+type DecomposedWord =
+   { BaseWord: string
+     WordType: WordType
+     Steps: Inflection list
+     VerbAttributes: VerbAttribute list }
+
 let private nounEndings =
    [ "pa"
      "pe"
@@ -162,7 +168,8 @@ let rec private tryMatch
 
       decomposeStep remaining (Some baseTypes)
       |> Option.filter (fun (_, wordType, _) ->
-         not <| Set.contains wordType uninflectableWordTypes)
+         not
+         <| Set.contains wordType uninflectableWordTypes)
       |> Option.map (fun (baseWord, wordType, inflections) ->
          (baseWord, wordType, inflection :: inflections))
    else
@@ -186,4 +193,10 @@ and private decomposeStep
             |> Option.defaultValue true)
          |> Option.map (fun wordType -> (word, wordType, []))))
 
-let decompose word = decomposeStep word None
+let decompose word =
+   decomposeStep word None
+   |> Option.map (fun (word, wordType, steps) ->
+      { BaseWord = word
+        WordType = wordType
+        Steps = List.rev steps
+        VerbAttributes = [] })

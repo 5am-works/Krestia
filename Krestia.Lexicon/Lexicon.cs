@@ -1,22 +1,29 @@
 ﻿namespace Krestia.Lexicon;
 
 public class Lexicon {
-   public List<Word> Nouns { get; set; } = new();
-   public List<Word> AssociativeNouns { get; set; } = new();
-   public List<Verb> Verbs { get; set; } = new();
-   public List<Word> OtherWords { get; set; } = new();
-   public List<List<string>> RelatedWords { get; set; } = new();
+   public Word[] Nouns { get; init; } = Array.Empty<Word>();
+   public Word[] AssociativeNouns { get; init; } = Array.Empty<Word>();
+   public Word[] Verbs { get; init; } = Array.Empty<Word>();
+   public Word[] OtherWords { get; init; } = Array.Empty<Word>();
+   public string[][] RelatedWords { get; init; } = Array.Empty<string[]>();
 }
 
-public class Word {
-   public string Spelling { get; set; } = null!;
-   public string Meaning { get; set; } = null!;
-   public string? Gloss { get; set; }
-   public string? ExpandedForm { get; set; }
-   public List<string> Roots { get; set; } = new();
-   public string? Remarks { get; set; }
+public readonly struct Word {
+   public Word() { }
+
+   public string Spelling { get; init; } = null!;
+   public string Meaning { get; init; } = null!;
+   public string? Gloss { get; init; } = null;
+   public string? ExpandedForm { get; init; } = null;
+   public string[] Roots { get; init; } = Array.Empty<string>();
+   public string? Remarks { get; init; } = null;
+
+   public ExampleUsage[]? ExampleUsages { get; init; } = null;
+
+   public string Context { get; init; } = null!;
 }
 
-public class Verb : Word {
-   public string Context { get; set; } = null!;
+public readonly struct ExampleUsage {
+   public string Text { get; init; }
+   public string Translation { get; init; }
 }

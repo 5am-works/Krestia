@@ -12,5 +12,12 @@ type DecomposeTests() =
 
       Assert.That(
          result,
-         Is.EqualTo(Some("kuna", Noun, [ PredicativeIdentity ]))
+         Is.EqualTo(
+            Some(
+               { BaseWord = "kuna"
+                 WordType = Noun
+                 Steps = [ PredicativeIdentity ]
+                 VerbAttributes = [] }
+            )
+         )
       )

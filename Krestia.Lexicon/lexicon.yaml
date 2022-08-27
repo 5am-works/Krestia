@@ -55,12 +55,12 @@
 
   - spelling: luna
     meaning: the sun
+    gloss: sun
     roots: [ lunata ]
 
   - spelling: lunata
-    meaning: star
-    remarks: >
-      This word specifically refers to astronomical objects, not people.
+    meaning: star (astronomical)
+    gloss: star
 
   - spelling: gremi
     meaning: sky
@@ -102,6 +102,16 @@
   - spelling: prine
     meaning: away from here
     remarks: Refers to anywhere where the speaker is not
+    gloss: away
+    example_usages:
+      - text: leratei prine
+        translation: Go away!
+
+  - spelling: krite
+    meaning: this
+
+  - spelling: prete
+    meaning: that
 
 associative_nouns:
   - spelling: todri
@@ -117,16 +127,10 @@ associative_nouns:
 
   - spelling: ligri
     meaning: name of
-  
-  - spelling: krite
-    meaning: this
-  
-  - spelling: prete
-    meaning: that
 
 verbs:
   # Swadesh list
-  - spelling: litenes
+  - spelling: literas
     meaning: to die
     gloss: die
     context: "{0} dies"

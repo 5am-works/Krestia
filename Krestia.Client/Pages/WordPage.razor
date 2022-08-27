@@ -17,7 +17,20 @@
          <p>In context: @((MarkupString)string.Format(Result.Syntax, "a<sub>1</sub>", "a<sub>2</sub>", "a<sub>3</sub>"))</p>
       }
       @if (Result.ExpandedForm is not null) {
-         <p>Expanded form: @Result.ExpandedForm</p>
+         <p>Expanded form: <a href="/search/@Result.ExpandedForm">@Result.ExpandedForm</a></p>
+      }
+      @if (Result.Remark is not null) {
+         <p>Remark: @Result.Remark</p>
+      }
+      @if (Result.ExampleUsages is not null) {
+         <p>Example usages:</p>
+         <ul>
+            @foreach (var (text, translation) in Result.ExampleUsages) {
+               <li>
+                  <a href="/search/@text">@text</a><br/>@translation
+               </li>
+            }
+         </ul>
       }
       @if (Result.InflectedForms.Any()) {
          <h3>Inflected forms</h3>

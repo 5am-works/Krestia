@@ -52,15 +52,18 @@ type LexiconTests() =
       let spelling = word.Spelling
 
       match baseTypeOf word.Spelling with
-      | Some baseType ->
+      | Some _ ->
          decompose spelling
-         |> Option.map (fun (baseWord, actualType, inflections) ->
+         |> Option.map (fun result ->
+            let baseWord = result.BaseWord
+            let actualType = result.WordType
+            let inflections = result.Steps
             if baseWord <> word.Spelling then
                let collidedWord =
-                  this.lexicon.Find(baseWord) |> Option.ofObj
+                  this.lexicon.Find(baseWord) |> Option.ofNullable
 
                match collidedWord with
-               | Some collidedWord ->
+               | Some _ ->
 
                   Assert.Fail(
                      "{0} is an inflected form of {1}, which exists in the dictionary",

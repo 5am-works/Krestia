@@ -67,11 +67,12 @@ let singularVerbRules =
      ir [ Verb13 ] Partial3 "rus" Verb1 false
      ir [ Verb123 ] Partial3 "rut" Verb12 false
      ir [ Verb23 ] Partial3 "rug" Verb2 false
+     ir [ Verb123 ] Shift1 "raap" Verb123 false
      ir [ Verb12 ] Shift2 "ret" Verb12 false
      ir [ Verb123 ] Shift2 "rep" Verb123 false
-     ir [ Verb13 ] Shift3 "rak" Verb13 false
-     ir [ Verb123 ] Shift3 "rap" Verb123 false
-     ir [ Verb23 ] Shift3 "rav" Verb23 false
+     ir [ Verb13 ] Shift3 "rik" Verb13 false
+     ir [ Verb123 ] Shift3 "rip" Verb123 false
+     ir [ Verb23 ] Shift3 "riv" Verb23 false
      ir [ Verb1; Verb12; Verb123; Verb13 ] Argument1 "aa" Noun false
      ir [ Verb2; Verb12; Verb23; Verb123 ] Argument2 "o" Noun false
      ir [ Verb3; Verb13; Verb23; Verb123 ] Argument3 "u" Noun false ]

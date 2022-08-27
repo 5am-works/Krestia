@@ -38,6 +38,7 @@ type Inflection =
    | Argument1
    | Argument2
    | Argument3
+   | Shift1
    | Shift2
    | Shift3
    | Partial1

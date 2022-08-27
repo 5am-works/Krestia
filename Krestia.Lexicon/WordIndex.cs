@@ -3,13 +3,13 @@
 public class WordIndex {
    private readonly Lexicon _lexicon;
    private readonly Dictionary<string, Word> _index;
-   public List<Word> Nouns => _lexicon.Nouns;
-   public List<Verb> Verbs => _lexicon.Verbs;
-   public List<Word> AssociativeNouns => _lexicon.AssociativeNouns;
+   public IReadOnlyList<Word> Nouns => _lexicon.Nouns;
+   public IReadOnlyList<Word> Verbs => _lexicon.Verbs;
+   public IReadOnlyList<Word> AssociativeNouns => _lexicon.AssociativeNouns;
    public IEnumerable<Word> AllWords => _index.Values;
 
    public WordIndex() {
-      _lexicon = LexiconLoader.Load();
+      _lexicon = LexiconLoader.LexiconInstance;
       _index = _lexicon.Nouns
          .Concat(_lexicon.Verbs)
          .Concat(_lexicon.AssociativeNouns)

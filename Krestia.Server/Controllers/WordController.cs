@@ -1,12 +1,9 @@
-﻿using System.Collections.Immutable;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using Krestia.Lexicon;
 using Krestia.Parser;
 using Krestia.Server.Utils;
 using Krestia.Web.Common;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.FSharp.Collections;
-using Microsoft.FSharp.Core;
 
 namespace Krestia.Server.Controllers;
 
@@ -43,11 +40,11 @@ public class WordController : ControllerBase {
    [Produces(typeof(WordResponse))]
    public IActionResult GetWord(string word) {
       var result = _wordIndex.Find(word);
-      if (result is null) {
+      if (!result.HasValue) {
          return NotFound();
       }
 
-      return Ok(result.ToWordResponse());
+      return Ok(result.Value.ToWordResponse());
    }
 
    [HttpGet("wordlist/alphabetical")]
@@ -75,17 +72,25 @@ public class WordController : ControllerBase {
       return Ok(results);
    }
 
-   private IEnumerable<DecomposedResult?> DecomposeWords(string query) {
+   private IEnumerable<DecomposedResult> DecomposeWords(string query) {
       var words = query.Split(' ');
 
       foreach (var word in words) {
          var result = Decompose.decompose(word);
-         DecomposedResult? decomposedResult;
+         DecomposedResult decomposedResult;
          try {
-            var (baseWord, _, steps) = result.Value;
+            var decomposedWord = result.Value;
+            var baseWord = decomposedWord.BaseWord;
+            var steps = decomposedWord.Steps;
             var dictionaryEntry = _wordIndex.Find(baseWord);
-            decomposedResult = new DecomposedResult(word, dictionaryEntry?.Gloss, baseWord,
-               steps.Select(ResponseHelper.FormatInflectionStep).ToList());
+            if (dictionaryEntry.HasValue) {
+               decomposedResult = new DecomposedResult(word,
+                  dictionaryEntry.Value.Gloss ?? dictionaryEntry.Value.Meaning,
+                  baseWord,
+                  steps.Select(ResponseHelper.FormatInflectionStep).ToList());
+            } else {
+               decomposedResult = new DecomposedResult(word);
+            }
          } catch (NullReferenceException) {
             decomposedResult = new DecomposedResult(word);
          }

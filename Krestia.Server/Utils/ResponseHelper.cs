@@ -13,8 +13,10 @@ public static class ResponseHelper {
          .Where(rule => rule.Item1.Contains(wordType)).Select(rule =>
             Tuple.Create(FormatInflection(rule.Item2),
                word.Spelling + rule.Item3));
-      var contextMeaning = (word as Verb)?.Context;
-      var fullForm = (word as Verb)?.ExpandedForm;
+      var contextMeaning = word.Context;
+      var fullForm = word.ExpandedForm;
+      var exampleUsages =
+         word.ExampleUsages?.Select(u => Tuple.Create(u.Text, u.Translation));
 
       return new WordResponse {
          Spelling = word.Spelling,
@@ -24,6 +26,8 @@ public static class ResponseHelper {
          InflectedForms = inflectedForms,
          Syntax = contextMeaning,
          ExpandedForm = fullForm,
+         ExampleUsages = exampleUsages,
+         Remark = word.Remarks,
       };
    }
 

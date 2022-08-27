@@ -2,7 +2,6 @@
 
 public class WordResponse {
    private List<string>? _categories;
-   private readonly string? _remark;
    private readonly List<string>? _roots;
 
    public string Spelling { get; init; } = null!;
@@ -18,10 +17,7 @@ public class WordResponse {
 
    public string? Gloss { get; init; }
 
-   public string? Remark {
-      get => _remark ?? "";
-      init => _remark = value;
-   }
+   public string? Remark { get; init; }
 
    public List<string>? Categories {
       get => _categories ?? new List<string>();
@@ -43,4 +39,6 @@ public class WordResponse {
    public IEnumerable<string>? AttachmentInflections { get; init; }
    
    public string? ExpandedForm { get; init; }
+   
+   public IEnumerable<Tuple<string, string>>? ExampleUsages { get; init; }
 }
