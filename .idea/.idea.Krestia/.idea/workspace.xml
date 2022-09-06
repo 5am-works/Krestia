@@ -4,6 +4,7 @@
     <projectFile>Kerstia.Parser.Tests/Kerstia.Parser.Tests.fsproj</projectFile>
     <projectFile profileName="IIS Express">Krestia.Client/Krestia.Client.csproj</projectFile>
     <projectFile profileName="Krestia.Client">Krestia.Client/Krestia.Client.csproj</projectFile>
+    <projectFile profileName="Krestia.Functions">Krestia.Functions/Krestia.Functions.csproj</projectFile>
     <projectFile profileName="IIS Express">Krestia.Server/Krestia.Server.csproj</projectFile>
     <projectFile profileName="Krestia.Server">Krestia.Server/Krestia.Server.csproj</projectFile>
   </component>
@@ -12,22 +13,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Krestia.Client/staticwebapp.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Krestia.Client/wwwroot/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Krestia.Functions/ResponseHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/SearchResultsPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Pages/SearchResultsPage.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/WordPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Pages/WordPage.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/LexiconLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/LexiconLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/WordIndex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/WordIndex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Server/Controllers/WordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Controllers/WordController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Server/Utils/ResponseHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Server/Utils/ResponseHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Web.Common/SearchResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Web.Common/SearchResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Web.Common/WordResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Web.Common/WordResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fc7e2cea3a1048049709f26b16c6fc0038a00/90/025b4dcd/PascalCaseNamingConvention.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0994cb284dd9bd5d5a9fc1762dc3c71554e9e67af9b2ce983b73a9a07050/Assert.That.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1/Assert.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/57a1b763d9c3b55e7d6266c336fc5b97dc3ca0169e7e4d222dd15e81ab64e/JsonSerializerOptions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/967970eb58b63e4977b87c01850b7af6afd5431576aa402786bd2d7aee5e95/Assert.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a8b3625d2e2e1ca3cdb5e35a44c6eaa5634d969bd2a1ce6bdb9052bf64309ca1/option.fs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ca860fea1234fdab4474cfa1911d325a886a3e2e7692197955e531a9eb8e081/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/df71358f7b7337a1eee3a65abe6d678dd9a065e256b8cc3fd44a2949754/Object.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Krestia.Client/wwwroot/css/app.css.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/204e56d4e4cb26fc4101bd6c67853be7a4123821a28b5882b89264ace96e97c/StringValues.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Client/wwwroot/css/bootstrap/bootstrap.min.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" root0="FORCE_HIGHLIGHTING" />
@@ -66,22 +52,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Packages\\npm\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Packages\\npm\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Krestia.Server: IIS Express">
+}]]></component>
+  <component name="RunManager" selected="Azure Functions host.Krestia.Functions">
+    <configuration name="Krestia.Functions" type="AzureFunctionsHost" factoryName="Azure Functions host">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Krestia.Functions/bin/Debug/net6.0/Krestia.Functions.dll" />
+      <option name="PROGRAM_PARAMETERS" value="host start --pause-on-error --verbose" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Krestia.Functions/bin/Debug/net6.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Krestia.Functions/Krestia.Functions.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="0" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="RunnableProjectKind(name=AzureFunctions)" />
+      <option name="PROJECT_TFM" value="net6.0" />
+      <option name="FUNCTION_NAMES" value="" />
+      <browser url="http://localhost:7071" />
+      <method v="2">
+        <option name="BuildFunctionsProject" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Krestia SWA" type="CompoundRunConfigurationType">
+      <toRun name="Krestia.Client" type="LaunchSettings" />
+      <toRun name="Krestia.Functions" type="AzureFunctionsHost" />
+      <method v="2" />
+    </configuration>
     <configuration name="Kerstia.Parser.Tests" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Kerstia.Parser.Tests/bin/Debug/net6.0/Kerstia.Parser.Tests.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -130,6 +141,21 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="Krestia.Functions" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Krestia.Functions/Krestia.Functions.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="Krestia.Functions" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="Krestia.Server" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Krestia.Server/Krestia.Server.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -160,6 +186,16 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.Krestia.Client" />
+      <item itemvalue=".NET Launch Settings Profile.Krestia.Client: IIS Express" />
+      <item itemvalue=".NET Launch Settings Profile.Krestia.Functions" />
+      <item itemvalue=".NET Launch Settings Profile.Krestia.Server" />
+      <item itemvalue=".NET Launch Settings Profile.Krestia.Server: IIS Express" />
+      <item itemvalue=".NET Project.Kerstia.Parser.Tests" />
+      <item itemvalue="Azure Functions host.Krestia.Functions" />
+      <item itemvalue="Compound.Krestia SWA" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -185,6 +221,8 @@
       <workItem from="1661473761719" duration="5767000" />
       <workItem from="1661549358375" duration="160000" />
       <workItem from="1661549625095" duration="9533000" />
+      <workItem from="1662416045760" duration="2391000" />
+      <workItem from="1662418856928" duration="3379000" />
     </task>
     <servers />
   </component>
