@@ -41,9 +41,9 @@
             </tr>
             </thead>
             <tbody>
-            @foreach (var (inflection, form) in Result.InflectedForms) {
+            @foreach (var form in Result.InflectedForms) {
                <tr>
-                  <td>@inflection</td><td>@form</td>
+                  <td>@form.FormName</td><td>@form.FormSpelling</td>
                </tr>
             }
             </tbody>

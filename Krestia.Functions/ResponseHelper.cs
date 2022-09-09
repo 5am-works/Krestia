@@ -5,15 +5,17 @@ using Krestia.Parser;
 using static Krestia.Parser.Decompose;
 using Krestia.Web.Common;
 
-namespace Krestia.Functions; 
+namespace Krestia.Functions;
 
 public static class ResponseHelper {
    public static WordResponse ToWordResponse(this Word word) {
       var wordType = baseTypeOf(word.Spelling).Value;
       var inflectedForms = Inflections.rules
          .Where(rule => rule.Item1.Contains(wordType)).Select(rule =>
-            Tuple.Create(FormatInflection(rule.Item2),
-               word.Spelling + rule.Item3));
+            new InflectedForm {
+               FormName = FormatInflection(rule.Item2),
+               FormSpelling = word.Spelling + rule.Item3,
+            });
       var contextMeaning = word.Context;
       var fullForm = word.ExpandedForm;
       var exampleUsages =
@@ -108,6 +110,7 @@ public static class ResponseHelper {
          WordType.Inflection.Tags.Partial1 => "Partial 1",
          WordType.Inflection.Tags.Partial2 => "Partial 2",
          WordType.Inflection.Tags.Partial3 => "Partial 3",
+         WordType.Inflection.Tags.Shift1 => "Shift 1",
          WordType.Inflection.Tags.Shift2 => "Shift 2",
          WordType.Inflection.Tags.Shift3 => "Shift 3",
          WordType.Inflection.Tags.AttributiveIdentity => "Attributive identity",

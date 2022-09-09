@@ -28,7 +28,7 @@ public class WordResponse {
 
    public IEnumerable<string>? Syllables { get; init; }
 
-   public IEnumerable<Tuple<string, string>> InflectedForms { get; init; } = null!;
+   public IEnumerable<InflectedForm> InflectedForms { get; init; } = null!;
 
    public IEnumerable<string?>? Slots { get; init; }
 
@@ -41,4 +41,9 @@ public class WordResponse {
    public string? ExpandedForm { get; init; }
    
    public IEnumerable<Tuple<string, string>>? ExampleUsages { get; init; }
+}
+
+public class InflectedForm {
+   public string FormName { get; init; }
+   public string FormSpelling { get; init; }
 }
