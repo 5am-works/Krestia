@@ -10,6 +10,10 @@
       <p>Loading...</p>
    } else {
       <h2 class="vorto">@Result.Spelling</h2>
+      @if (Result.Syllables is not null) {
+         <Timeran Height="25" Syllables="@Result.Syllables.ToArray()"
+                  WordType="@Result.WordType"/>
+      }
       <div class="streko"></div>
       <p class="vorttipo">@Result.WordType</p>
       <p>@Result.Meaning</p>
@@ -41,7 +45,7 @@
             @if (etymology.Combination is not null) {
                <span>
                   Combination of@(" ")
-                  @{var i = 0;}
+                  @{ var i = 0; }
                   @foreach (var root in etymology.Combination) {
                      <a href="/word/@root">@root</a>
                      if (i < etymology.Combination.Length - 1) {
@@ -118,3 +122,4 @@
    }
 
 }
+

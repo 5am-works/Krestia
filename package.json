@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "sass Krestia.Client/wwwroot/css/App.scss Krestia.Client/wwwroot/css/app.css",
+    "build": "sass Krestia.Client/wwwroot/css/App.scss Krestia.Client/wwwroot/css/app.css && tsc -b",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.52.1"
+    "sass": "^1.52.1",
+    "typescript": "^4.8.3"
   }
 }

@@ -22,9 +22,12 @@ public static class ResponseHelper {
       var fullForm = word.ExpandedForm;
       var exampleUsages =
          word.ExampleUsages?.Select(u => Tuple.Create(u.Text, u.Translation));
+      var syllables =
+         Phonotactics.splitIntoSyllables(word.Spelling).ResultValue;
 
       return new WordResponse {
          Spelling = word.Spelling,
+         Syllables = syllables,
          Gloss = word.Gloss,
          Meaning = word.Meaning,
          QuantifiedMeaning = word.QuantifiedMeaning,

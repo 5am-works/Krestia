@@ -24,4 +24,12 @@
       <_ContentIncludedByDefault Remove="Pages\Index.razor" />
     </ItemGroup>
 
+    <ItemGroup>
+      <TypeScriptCompile Include="wwwroot\timeran.ts" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="wwwroot\tsconfig.json" />
+    </ItemGroup>
+
 </Project>

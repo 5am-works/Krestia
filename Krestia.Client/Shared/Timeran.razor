@@ -1,0 +1,25 @@
+﻿@inject IJSRuntime Js
+
+<canvas class="kanvaso" height="@(Height + Space * 2 + 3)" width="150"
+        @ref="Canvas">
+</canvas>
+
+@code {
+      private const int Space = 7;
+
+   [Parameter, EditorRequired]
+   public int Height { get; set; }
+
+   [Parameter, EditorRequired]
+   public string[]? Syllables { get; set; }
+
+   [Parameter, EditorRequired]
+   public string WordType { get; set; } = null!;
+
+   private ElementReference Canvas { get; set; }
+
+   protected override async Task OnAfterRenderAsync(bool firstRender) {
+      await Js.InvokeVoidAsync("drawTimeran", Syllables, Height, Space, WordType, Canvas);
+   }
+
+}
