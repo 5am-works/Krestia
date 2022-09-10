@@ -7,10 +7,10 @@ public class WordResponse {
 
    public string? Stem { get; init; }
 
-   public string? Etymology { get; init; }
+   public Etymology? Etymology { get; init; }
 
    public string? Meaning { get; init; }
-   
+
    public string? QuantifiedMeaning { get; init; }
 
    public string? Gloss { get; init; }
@@ -35,13 +35,24 @@ public class WordResponse {
    public IEnumerable<string>? CanModifyWordTypes { get; init; }
 
    public IEnumerable<string>? AttachmentInflections { get; init; }
-   
+
    public string? ExpandedForm { get; init; }
-   
+
    public IEnumerable<Tuple<string, string>>? ExampleUsages { get; init; }
 }
 
+public class Etymology {
+   public string? Clipping { get; init; }
+   public string? Variant { get; init; }
+   public string? Metaphor { get; init; }
+   public string[]? Combination { get; init; }
+   public string? Copy { get; init; }
+   public string? Contraction { get; init; }
+   public string? Foreign { get; init; }
+   public string? Derivation { get; init; }
+}
+
 public class InflectedForm {
-   public string FormName { get; init; }
-   public string FormSpelling { get; init; }
+   public string FormName { get; init; } = null!;
+   public string FormSpelling { get; init; } = null!;
 }

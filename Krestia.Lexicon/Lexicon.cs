@@ -23,6 +23,8 @@ public readonly struct Word {
    public ExampleUsage[]? ExampleUsages { get; init; } = null;
 
    public string Context { get; init; } = null!;
+
+   public string[]? Domains { get; init; } = null;
 }
 
 public readonly struct Etymology {
@@ -30,6 +32,10 @@ public readonly struct Etymology {
    public string? Variant { get; init; }
    public string? Metaphor { get; init; }
    public string? Clipping { get; init; }
+   public string? Copy { get; init; }
+   public string? Contraction { get; init; }
+   public string? Foreign { get; init; }
+   public string? Derivation { get; init; }
 }
 
 public readonly struct ExampleUsage {

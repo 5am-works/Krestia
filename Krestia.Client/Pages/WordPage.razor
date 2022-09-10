@@ -26,7 +26,44 @@
          <p>Remark: @Result.Remark</p>
       }
       @if (Result.Etymology is not null) {
-         <p>Etymolohy: @Result.Etymology</p>
+         var etymology = Result.Etymology;
+         <p>
+            Etymology:@(" ")
+            @if (etymology.Clipping is not null) {
+               <span>Clipping of <a href="/word/@etymology.Clipping">@etymology.Clipping</a></span>
+            }
+            @if (etymology.Metaphor is not null) {
+               <span>Metaphoric derivation of <a href="/word/@etymology.Metaphor">@etymology.Metaphor</a></span>
+            }
+            @if (etymology.Variant is not null) {
+               <span>Variant of <a href="/word/@etymology.Variant">@etymology.Variant</a></span>
+            }
+            @if (etymology.Combination is not null) {
+               <span>
+                  Combination of@(" ")
+                  @{var i = 0;}
+                  @foreach (var root in etymology.Combination) {
+                     <a href="/word/@root">@root</a>
+                     if (i < etymology.Combination.Length - 1) {
+                        <span>, </span>
+                     }
+                     i += 1;
+                  }
+               </span>
+            }
+            @if (etymology.Copy is not null) {
+               <span>Copy of <a href="/word/@etymology.Copy">@etymology.Copy</a></span>
+            }
+            @if (etymology.Contraction is not null) {
+               <span>Contraction of <a href="/search/@etymology.Contraction">@etymology.Contraction</a></span>
+            }
+            @if (etymology.Derivation is not null) {
+               <span>Derivation of <a href="/word/@etymology.Derivation">@etymology.Derivation</a></span>
+            }
+            @if (etymology.Foreign is not null) {
+               <span>Foreign word <a href="https://en.wiktionary.org/wiki/@etymology.Foreign">@etymology.Foreign</a></span>
+            }
+         </p>
       }
       @if (Result.ExampleUsages is not null) {
          <p>Example usages:</p>

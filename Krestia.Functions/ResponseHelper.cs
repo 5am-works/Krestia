@@ -4,6 +4,8 @@ using Krestia.Lexicon;
 using Krestia.Parser;
 using static Krestia.Parser.Decompose;
 using Krestia.Web.Common;
+using Etymology = Krestia.Lexicon.Etymology;
+using WCEtymology = Krestia.Web.Common.Etymology;
 
 namespace Krestia.Functions;
 
@@ -32,6 +34,9 @@ public static class ResponseHelper {
          ExpandedForm = fullForm,
          ExampleUsages = exampleUsages,
          Remark = word.Remarks,
+         Etymology = word.Roots.HasValue
+            ? ConvertEtymology(word.Roots.Value)
+            : null,
       };
    }
 
@@ -117,6 +122,19 @@ public static class ResponseHelper {
          WordType.Inflection.Tags.AttributiveIdentity => "Attributive identity",
          WordType.Inflection.Tags.PredicativeIdentity => "Predicative identity",
          _ => inflection.ToString(),
+      };
+   }
+
+   private static WCEtymology ConvertEtymology(Etymology etymology) {
+      return new WCEtymology {
+         Clipping = etymology.Clipping,
+         Variant = etymology.Variant,
+         Metaphor = etymology.Metaphor,
+         Combination = etymology.Combination,
+         Copy = etymology.Copy,
+         Contraction = etymology.Contraction,
+         Derivation = etymology.Derivation,
+         Foreign = etymology.Foreign,
       };
    }
 }

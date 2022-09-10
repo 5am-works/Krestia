@@ -60,9 +60,14 @@
    private SearchResponse? Results { get; set; }
 
    protected override async Task OnParametersSetAsync() {
-      var test = await HttpClient.GetStringAsync("/api/TestFunction?name=abc");
-      Console.WriteLine(test);
-      Results = await HttpClient.GetFromJsonAsync<SearchResponse>($"/api/search/{Input}");
+      Results = null;
+      Error = null;
+      StateHasChanged();
+      try {
+         Results = await HttpClient.GetFromJsonAsync<SearchResponse>($"/api/search/{Input}");
+      } catch (Exception e) {
+         Error = e.Message;
+      }
    }
 
 }

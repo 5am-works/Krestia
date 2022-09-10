@@ -105,7 +105,7 @@
     remarks: Refers to anywhere where the speaker is not
     gloss: away
     example_usages:
-      - text: leratei prine
+      - text: leratae prine
         translation: Go away!
 
   - spelling: krite
@@ -113,6 +113,31 @@
 
   - spelling: prete
     meaning: that
+    
+  - spelling: beseti
+    meaning: zodiac sign
+    domains: [ Tatreta ]
+  
+  - spelling: enita
+    meaning: sheep
+  
+  - spelling: kilite
+    meaning: cattle
+  
+  - spelling: glinki
+    meaning: crab
+  
+  - spelling: norite
+    meaning: lion
+  
+  - spelling: preta
+    meaning: scale (weight)
+  
+  - spelling: livopi
+    meaning: scorpion
+  
+  - spelling: remiti
+    meaning: fish
 
 associative_nouns:
   - spelling: todri
@@ -128,6 +153,14 @@ associative_nouns:
 
   - spelling: ligri
     meaning: name of
+  
+  - spelling: votogri
+    meaning: twin of
+    roots:
+      combination: [ vora, tote ]
+    example_usages:
+      - text: Revi votogris Rivi
+        translation: Revi is the twin of Rivi.
 
 verbs:
   # Swadesh list
@@ -228,6 +261,10 @@ verbs:
   - spelling: posip
     meaning: to pull, to draw
     context: "{0} pulls/draws {1} away from {2}"
+  
+  - spelling: silip
+    meaning: to shoot
+    context: "{0} shoots {1} towards {2}"
 
 names:
   - spelling: Luna
@@ -239,7 +276,79 @@ names:
     meaning: the moon (of Earth)
     roots:
       clipping: rimata
+  
+  - spelling: Enita
+    meaning: Aries (zodiac)
+    roots:
+      copy: enita
+    domains: [ Tatreta ]
+  
+  - spelling: Kilito
+    meaning: Taurus (zodiac)
+    roots:
+      variant: kilite
+    domains: [ Tatreta ]
+    
+  - spelling: Votogri
+    meaning: Gemini (zodiac)
+    roots:
+      variant: votogri
+    domains: [ Tatreta ]
 
+  - spelling: Gliniki
+    meaning: Cancer (zodiac)
+    roots:
+      copy: gliniki
+    domains: [ Tatreta ]
+    
+  - spelling: Norita
+    meaning: Leo (zodiac)
+    roots:
+      variant: norite
+    domains: [ Tatreta ]
+    
+  - spelling: Astarea
+    meaning: Virgo (zodiac)
+    roots:
+      foreign: Astraea
+    domains: [ Tatreta ]
+
+  - spelling: Preta
+    meaning: Libra (zodiac)
+    roots:
+      copy: preta
+    domains: [ Tatreta ]
+
+  - spelling: Livopi
+    meaning: Scorpio (zodiac)
+    roots:
+      copy: livopi
+    domains: [ Tatreta ]
+    
+  - spelling: Silisa
+    meaning: Sagittarius (zodiac)
+    roots:
+      derivation: silisaa
+    domains: [ Tatreta ]
+
+  - spelling: Kaprikorno
+    meaning: Capricorn (zodiac)
+    roots:
+      foreign: kaprikorno
+    domains: [ Tatreta ]
+
+  - spelling: Glakuna
+    meaning: Aquarius (zodiac)
+    roots:
+      contraction: glatresaa kuna
+    domains: [ Tatreta ]
+
+  - spelling: Remivora
+    meaning: Pisces (zodiac)
+    roots:
+      contraction: remiti sel vora
+    domains: [ Tatreta ]
+    
 other_words:
   # Numbers
   - spelling: mi
