@@ -93,7 +93,7 @@ let rules =
                     Desiderative
                     "ila"
                     true
-                 each [ Verb1; Verb12; Verb123; Verb13 ] Imperative "ei" true
+                 each [ Verb1; Verb12; Verb123; Verb13 ] Imperative "ae" true
                  verbEach Optative "ie" true
                  each [ Verb1; Verb12; Verb123; Verb13 ] Hortative "oa" true
                  uniformVerbRules

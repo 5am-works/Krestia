@@ -13,6 +13,9 @@
       <div class="streko"></div>
       <p class="vorttipo">@Result.WordType</p>
       <p>@Result.Meaning</p>
+      @if (Result.QuantifiedMeaning is not null) {
+         <p>Quantified meaning: @Result.QuantifiedMeaning</p>
+      }
       @if (Result.Syntax is not null) {
          <p>In context: @((MarkupString)string.Format(Result.Syntax, "a<sub>1</sub>", "a<sub>2</sub>", "a<sub>3</sub>"))</p>
       }
@@ -21,6 +24,9 @@
       }
       @if (Result.Remark is not null) {
          <p>Remark: @Result.Remark</p>
+      }
+      @if (Result.Etymology is not null) {
+         <p>Etymolohy: @Result.Etymology</p>
       }
       @if (Result.ExampleUsages is not null) {
          <p>Example usages:</p>

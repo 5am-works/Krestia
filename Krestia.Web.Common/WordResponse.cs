@@ -2,18 +2,16 @@
 
 public class WordResponse {
    private List<string>? _categories;
-   private readonly List<string>? _roots;
 
    public string Spelling { get; init; } = null!;
 
    public string? Stem { get; init; }
 
-   public List<string>? Roots {
-      get => _roots ?? new List<string>();
-      init => _roots = value;
-   }
+   public string? Etymology { get; init; }
 
    public string? Meaning { get; init; }
+   
+   public string? QuantifiedMeaning { get; init; }
 
    public string? Gloss { get; init; }
 

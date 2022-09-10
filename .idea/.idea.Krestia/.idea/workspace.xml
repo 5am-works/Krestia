@@ -14,6 +14,14 @@
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/WordPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Pages/WordPage.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Functions/ResponseHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/ResponseHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Functions/TestFunction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/Functions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/WordIndex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/WordIndex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Web.Common/WordResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Web.Common/WordResponse.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +44,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
+  </component>
   <component name="ProjectId" id="2Ae1wNVtufruTLN9zPOTaknYudM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -57,7 +68,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Krestia.Client">
+  <component name="RunManager" selected="Azure Functions host.Krestia.Functions">
     <configuration name="Krestia.Functions" type="AzureFunctionsHost" factoryName="Azure Functions host">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Krestia.Functions/bin/Debug/net6.0/Krestia.Functions.dll" />
       <option name="PROGRAM_PARAMETERS" value="host start --pause-on-error --verbose" />
@@ -213,7 +224,7 @@
       <workItem from="1661549625095" duration="9533000" />
       <workItem from="1662416045760" duration="2391000" />
       <workItem from="1662418856928" duration="3379000" />
-      <workItem from="1662759940961" duration="314000" />
+      <workItem from="1662759940961" duration="4008000" />
     </task>
     <servers />
   </component>
@@ -235,6 +246,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Krestia.Lexicon/WordIndex.cs</url>
+          <line>12</line>
+          <properties documentPath="D:\Projects\Krestia (rework)\Krestia.Lexicon\WordIndex.cs" initialLine="12" containingFunctionPresentation="constructor 'WordIndex'">
+            <startOffsets>
+              <option value="465" />
+            </startOffsets>
+            <endOffsets>
+              <option value="685" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

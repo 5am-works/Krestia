@@ -16,7 +16,7 @@ using Newtonsoft.Json;
 
 namespace Krestia.Functions;
 
-public static class TestFunction {
+public static class Functions {
    private static readonly WordIndex WordIndex = new();
 
    [FunctionName("TestFunction")]
@@ -47,7 +47,8 @@ public static class TestFunction {
       var words =
          from word in WordIndex.AllWords.AsParallel()
          where word.Spelling.Contains(lowercase) ||
-               word.Meaning.Contains(lowercase)
+               word.Meaning.Contains(lowercase) ||
+               word.QuantifiedMeaning?.Contains(lowercase) == true
          orderby Relevance(word, query)
          select new WordWithMeaning(word.Spelling, word.Meaning);
       return new OkObjectResult(new SearchResponse {

@@ -25,6 +25,7 @@ public static class ResponseHelper {
          Spelling = word.Spelling,
          Gloss = word.Gloss,
          Meaning = word.Meaning,
+         QuantifiedMeaning = word.QuantifiedMeaning,
          WordType = FormatWordType(wordType),
          InflectedForms = inflectedForms,
          Syntax = contextMeaning,
