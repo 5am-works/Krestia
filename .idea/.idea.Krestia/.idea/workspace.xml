@@ -14,15 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/SearchResultsPage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Pages/SearchResultsPage.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Functions/Functions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/Functions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/WordIndex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/WordIndex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Web.Common/SearchResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Web.Common/SearchResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/Pages/Homepage.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/Pages/Homepage.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +84,7 @@
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="0" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions))))))" />
+      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions)))))))" />
       <option name="PROJECT_TFM" value="net6.0" />
       <option name="FUNCTION_NAMES" value="" />
       <browser url="http://localhost:7071" />
@@ -238,7 +230,8 @@
       <workItem from="1662759940961" duration="4689000" />
       <workItem from="1662793019861" duration="4267000" />
       <workItem from="1662841802104" duration="7761000" />
-      <workItem from="1662884037423" duration="3399000" />
+      <workItem from="1662884037423" duration="4020000" />
+      <workItem from="1662931902357" duration="677000" />
     </task>
     <servers />
   </component>
