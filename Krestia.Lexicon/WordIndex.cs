@@ -3,6 +3,7 @@
 public class WordIndex {
    private readonly Lexicon _lexicon;
    private readonly Dictionary<string, Word> _index;
+   private readonly Dictionary<string, Word> _verbStems;
    public IReadOnlyList<Word> Nouns => _lexicon.Nouns;
    public IReadOnlyList<Word> Names => _lexicon.Names;
    public IReadOnlyList<Word> Verbs => _lexicon.Verbs;
@@ -17,9 +18,14 @@ public class WordIndex {
          .Concat(_lexicon.Names)
          .Concat(_lexicon.OtherWords)
          .ToDictionary(w => w.Spelling, w => w);
+      _verbStems = Verbs.ToDictionary(v => v.Spelling[..^1]);
    }
 
    public Word? Find(string word) {
       return _index.ContainsKey(word) ? _index[word] : null;
+   }
+
+   public Word? FindNormalFormOfVerb(string verbStem) {
+      return _verbStems.GetValueOrDefault(verbStem);
    }
 }

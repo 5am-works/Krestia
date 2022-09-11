@@ -25,6 +25,7 @@ type Inflection =
    | PredicativeIdentity
    | AttributiveIdentity
    | Gerund
+   | Instance
    | Existence
    | Lone
    | Progressive

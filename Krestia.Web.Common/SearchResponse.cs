@@ -32,15 +32,17 @@ public readonly struct DecomposedResult {
    public string SearchedWord { get; init; }
    public string? Meaning { get; init; }
    public string? BaseWord { get; init; }
+   public string? OriginalWord { get; init; }
 
    public IReadOnlyList<string> Steps { get; init; }
 
    public DecomposedResult(string searchedWord, string? meaning = null,
-      string? baseWord = null,
+      string? baseWord = null, string? originalWord = null,
       IReadOnlyList<string>? steps = null) {
       SearchedWord = searchedWord;
       Meaning = meaning;
       BaseWord = baseWord;
+      OriginalWord = originalWord;
       Steps = steps ?? new List<string>();
    }
 

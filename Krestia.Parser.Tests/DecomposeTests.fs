@@ -21,3 +21,19 @@ type DecomposeTests() =
             )
          )
       )
+
+   [<Test>]
+   member this.GlatrosaaRegression() =
+      let result = decompose "glatrosaa"
+
+      Assert.That(
+         result,
+         Is.EqualTo(
+            Some(
+               { BaseWord = "glat"
+                 WordType = Verb12
+                 Steps = [ Partial2; Argument1 ]
+                 VerbAttributes = [] }
+            )
+         )
+      )

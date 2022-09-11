@@ -52,7 +52,8 @@ let nounRules =
      noun Lone "m" Verb0 false ]
 
 let uniformVerbRules =
-   [ verb Gerund "ea" Noun true ]
+   [ verb Gerund "ea" Noun true
+     verb Instance "oi" Noun false ]
 
 let singularVerbRules =
    [ ir [ Verb1 ] Partial1 "raam" Verb0 false
@@ -73,9 +74,9 @@ let singularVerbRules =
      ir [ Verb13 ] Shift3 "rik" Verb13 false
      ir [ Verb123 ] Shift3 "rip" Verb123 false
      ir [ Verb23 ] Shift3 "riv" Verb23 false
-     ir [ Verb1; Verb12; Verb123; Verb13 ] Argument1 "aa" Noun false
-     ir [ Verb2; Verb12; Verb23; Verb123 ] Argument2 "o" Noun false
-     ir [ Verb3; Verb13; Verb23; Verb123 ] Argument3 "u" Noun false ]
+     ir [ Verb1 ] Argument1 "aa" Noun false
+     ir [ Verb2 ] Argument2 "o" Noun false
+     ir [ Verb3 ] Argument3 "u" Noun false ]
 
 let rules =
    List.concat [ nounRules

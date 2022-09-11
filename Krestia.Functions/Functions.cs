@@ -12,6 +12,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Microsoft.FSharp.Core;
 using Newtonsoft.Json;
 
 namespace Krestia.Functions;
@@ -33,22 +34,27 @@ public static class Functions {
 
       return name != null
          ? new OkObjectResult($"Hello, {name}")
-         : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
+         : new BadRequestObjectResult(
+            "Please pass a name on the query string or in the request body");
    }
 
    [FunctionName("SearchFunction")]
    [Produces(typeof(SearchResponse))]
    public static IActionResult Search(
-      [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "search/{query}")]
+      [HttpTrigger(AuthorizationLevel.Anonymous, "get",
+         Route = "search/{query}")]
       HttpRequest request, string query) {
       var lowercase = query.ToLowerInvariant();
       var decomposedResults = DecomposeWords(query);
 
       var words =
          from word in WordIndex.AllWords.AsParallel()
-         where word.Spelling.Contains(lowercase) ||
-               word.Meaning.Contains(lowercase) ||
-               word.QuantifiedMeaning?.Contains(lowercase) == true
+         where word.Spelling.Contains(lowercase,
+                  StringComparison.InvariantCultureIgnoreCase) ||
+               word.Meaning.Contains(lowercase,
+                  StringComparison.InvariantCultureIgnoreCase) ||
+               word.QuantifiedMeaning?.Contains(lowercase,
+                  StringComparison.InvariantCultureIgnoreCase) == true
          orderby Relevance(word, query)
          select new WordWithMeaning(word.Spelling, word.Meaning);
       return new OkObjectResult(new SearchResponse {
@@ -73,7 +79,8 @@ public static class Functions {
    [FunctionName("AlphabeticalWordListFunction")]
    [Produces(typeof(IEnumerable<WordWithMeaning>))]
    public static IActionResult GetAlphabeticalWordList(
-      [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "wordlist/alphabetical")]
+      [HttpTrigger(AuthorizationLevel.Anonymous, "get",
+         Route = "wordlist/alphabetical")]
       HttpRequest request) {
       var words =
          from word in WordIndex.AllWords
@@ -85,7 +92,9 @@ public static class Functions {
    [FunctionName("WordTypeWordListFunction")]
    [Produces(typeof(Dictionary<string, IEnumerable<WordWithMeaning>>))]
    public static IActionResult GetWordTypeWordList(
-      [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "wordlist/wordtype")] HttpRequest request) {
+      [HttpTrigger(AuthorizationLevel.Anonymous, "get",
+         Route = "wordlist/wordtype")]
+      HttpRequest request) {
       var words =
          from word in WordIndex.AllWords
          group word by word.WordCategory()
@@ -108,11 +117,26 @@ public static class Functions {
             var decomposedWord = result.Value;
             var baseWord = decomposedWord.BaseWord;
             var steps = decomposedWord.Steps;
+            var verbType = Decompose.isVerb(baseWord);
+            Word? originalWord = null;
+            if (FSharpOption<WordType.WordType>.get_IsSome(verbType)) {
+               var stem = baseWord[..^1];
+               var normalWord = WordIndex.FindNormalFormOfVerb(stem);
+               if (normalWord.HasValue) {
+                  var normalType = Decompose.isVerb(normalWord.Value.Spelling)
+                     .Value;
+                  if (Decompose.isReducedForm(verbType.Value, normalType)) {
+                     originalWord = normalWord.Value;
+                  }
+               }
+            }
+
             var dictionaryEntry = WordIndex.Find(baseWord);
-            if (dictionaryEntry.HasValue) {
+            if (dictionaryEntry.HasValue || originalWord is not null) {
                decomposedResult = new DecomposedResult(word,
-                  dictionaryEntry.Value.Gloss ?? dictionaryEntry.Value.Meaning,
-                  baseWord,
+                  dictionaryEntry?.Gloss ?? dictionaryEntry?.Meaning ??
+                  originalWord?.Gloss ?? originalWord?.Meaning,
+                  baseWord, originalWord?.Spelling,
                   steps.Select(ResponseHelper.FormatInflectionStep).ToList());
             } else {
                decomposedResult = new DecomposedResult(word);

@@ -292,7 +292,7 @@ names:
   - spelling: Votogri
     meaning: Gemini (zodiac)
     roots:
-      variant: votogri
+      copy: votogri
     domains: [ Tatreta ]
 
   - spelling: Gliniki
@@ -340,7 +340,7 @@ names:
   - spelling: Glakuna
     meaning: Aquarius (zodiac)
     roots:
-      contraction: glatresaa kuna
+      contraction: glatrosaa kuna
     domains: [ Tatreta ]
 
   - spelling: Remivora

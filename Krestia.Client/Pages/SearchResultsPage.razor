@@ -25,7 +25,11 @@
                <tr>
                   <td>@result.SearchedWord</td>
                   <td>
-                     <a href=@($"/word/{result.BaseWord}")>@result.BaseWord</a>
+                     @if (result.OriginalWord is not null) {
+                        <span>(reduced form of) <a href=@($"/word/{result.OriginalWord}")>@result.OriginalWord</a></span>
+                     } else {
+                        <a href=@($"/word/{result.BaseWord}")>@result.BaseWord</a>
+                     }
                   </td>
                   <td>
                      @(string.Join("-", result.Steps))

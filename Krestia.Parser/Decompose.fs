@@ -151,6 +151,16 @@ let private standardPredicates =
 
 let baseTypeOf word =
    List.tryPick (fun p -> p word) predicates
+   
+let isReducedForm reducedType originalType =
+   match originalType with
+   | Verb123 -> reducedType <> Verb123
+   | Verb12 -> reducedType = Verb0 || reducedType = Verb1 || reducedType = Verb2
+   | Verb13 -> reducedType = Verb0 || reducedType = Verb1 || reducedType = Verb3
+   | Verb23 -> reducedType = Verb0 || reducedType = Verb2 || reducedType = Verb3
+   | Verb1 | Verb2 | Verb3 -> reducedType = Verb0
+   | Verb0 -> false
+   | _ -> failwith $"Not a verb type {originalType}"
 
 let rec private tryMatch
    (word: string)
