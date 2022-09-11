@@ -441,6 +441,14 @@ const drawFunctions = new Map<string, DrawFunction>([
       ctx.lineTo(x, y + height);
     },
   ],
+  [
+    "Name",
+    (ctx, height, width, x, y) => {
+      ctx.lineTo(x + width, y);
+      ctx.lineTo(x + width, y + height);
+      ctx.lineTo(x, y + height);
+    },
+  ],
 ]);
 
 const width = 23;
@@ -540,7 +548,7 @@ const drawTimeran = (
         break;
       case 4: // CCVC
         drawFunctions
-          .get(syllable.substr(0, 2))
+          .get(syllable.substring(0, 2))
           ?.call(null, path, halfHeight, width, x, y);
         path.moveTo(x, y + halfHeight + space);
         drawFunctions
@@ -561,6 +569,7 @@ const drawTimeran = (
     }
     x += width + space;
   });
+  path.moveTo(x, y);
   drawFunctions.get(wordType)?.call(null, path, fullHeight, width / 2, x, y);
   x += width + space;
   ctx.canvas.width = x;

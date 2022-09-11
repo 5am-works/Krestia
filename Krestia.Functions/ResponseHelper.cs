@@ -23,7 +23,7 @@ public static class ResponseHelper {
       var exampleUsages =
          word.ExampleUsages?.Select(u => Tuple.Create(u.Text, u.Translation));
       var syllables =
-         Phonotactics.splitIntoSyllables(word.Spelling).ResultValue;
+         Phonotactics.splitIntoSyllables(word.Spelling, withSuffix: false).ResultValue;
 
       return new WordResponse {
          Spelling = word.Spelling,
@@ -105,8 +105,8 @@ public static class ResponseHelper {
          WordType.WordType.Tags.Verb3 => "3-verb",
          WordType.WordType.Tags.Verb23 => "2-3-verb",
          WordType.WordType.Tags.AssociativeNoun => "Associative noun",
-         WordType.WordType.Tags.TerminalDigit => "Terminal digit",
-         WordType.WordType.Tags.NonTerminalDigit => "Non-terminal digit",
+         WordType.WordType.Tags.TerminalDigit => "Digit",
+         WordType.WordType.Tags.NonTerminalDigit => "Digit",
          _ => wordType.ToString(),
       };
    }
