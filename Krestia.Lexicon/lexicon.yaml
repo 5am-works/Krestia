@@ -161,6 +161,36 @@ associative_nouns:
     example_usages:
       - text: Revi votogris Rivi
         translation: Revi is the twin of Rivi.
+  
+  - spelling: krena
+    meaning: light (radiation)
+    remarks: Refers to light itself, and not any light emitters (e.g. lamps)
+    
+  - spelling: kreta
+    meaning: light (fixture)
+    roots:
+      derivation: krena
+  
+  - spelling: leti
+    meaning: word
+  
+  - spelling: moka
+    meaning: open, public
+    gloss: open
+  
+  - spelling: rena
+    meaning: dream
+    remarks: Refers to unfulfilled wishes
+  
+  - spelling: lumi
+    meaning: forever, eternal
+    gloss: forever
+  
+  - spelling: romote
+    meaning: summer
+  
+  - spelling: rinome
+    meaning: winter
 
 verbs:
   # Swadesh list
@@ -265,6 +295,21 @@ verbs:
   - spelling: silip
     meaning: to shoot
     context: "{0} shoots {1} towards {2}"
+  
+  - spelling: moris
+    meaning: to flash, to flicker, to fade in and out
+    context: "{0} flashes"
+    gloss: flash
+  
+  - spelling: nobret
+    meaning: to differ from
+    context: "{0} is different from {1}"
+    gloss: differ
+  
+  - spelling: ramet
+    meaning: to fade away, to gradually disappear
+    context: "{0} fades away from {1}"
+    gloss: fade
 
 names:
   - spelling: Luna
@@ -468,3 +513,5 @@ related_words:
   - [ het, hite, etika ]
   - [ posip, tesip ]
   - [ rone, prine ]
+  - [ krena, kreta ]
+  - [ romote, rinome ]
