@@ -138,6 +138,27 @@
   
   - spelling: remiti
     meaning: fish
+  
+  - spelling: lepa
+    meaning: apple
+  
+  - spelling: meki
+    meaning: tree
+  
+  - spelling: soponi
+    meaning: pain
+  
+  - spelling: kumoma
+    meaning: today
+  
+  - spelling: almeki
+    meaning: healthy
+    
+  - spelling: golepi
+    meaning: quiet
+  
+  - spelling: meka
+    meaning: red
 
 associative_nouns:
   - spelling: todri
@@ -476,41 +497,22 @@ other_words:
     meaning: 9, nine (terminal)
     gloss: 9
   
-  - spelling: hem
-    meaning: I (first-person pronoun)
-    gloss: 1PS
-    expanded_form: emika sil
-  
-  - spelling: hes
-    meaning: you (second-person singular pronoun)
-    gloss: 2PS
+  - spelling: epi
+    meaning: I (first-person pronoun), we (when plural)
+    gloss: 1P
+
+  - spelling: eti
+    meaning: you (second-person pronoun)
+    gloss: 2P
     expanded_form: esika sil
-  
-  - spelling: het
-    meaning: he, she, it, they (singular) (third-person singular pronoun)
-    gloss: 3PS
-    expanded_form: etika sil
-    
-  - spelling: hime
-    meaning: we (first-person pronoun)
-    gloss: 1PP
-    expanded_form: emika vel
 
-  - spelling: hise
-    meaning: you (second-person plural pronoun)
-    gloss: 2PP
-    expanded_form: esika vel
-
-  - spelling: hite
-    meaning: they (third-person plural pronoun)
-    gloss: 3PP
-    expanded_form: etika vel
+  - spelling: eki
+    meaning: he, she, it, they (third-person pronoun)
+    gloss: 3P
 
 related_words:
   - [ mina, mika ]
-  - [ hem, hime, emika ]
-  - [ hes, hise, esika ]
-  - [ het, hite, etika ]
+  - [ epi, eti, eki ]
   - [ posip, tesip ]
   - [ rone, prine ]
   - [ krena, kreta ]

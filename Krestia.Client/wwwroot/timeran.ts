@@ -200,8 +200,8 @@ const drawFunctions = new Map<string, DrawFunction>([
       ctx.moveTo(x, y + height);
       ctx.lineTo(x, y);
       ctx.lineTo(x + width, y);
-      ctx.lineTo((x * 3) / 4, y + height);
-      ctx.lineTo(x / 2, y);
+      ctx.lineTo(x + (width * 3) / 4, y + height);
+      ctx.lineTo(x + width / 2, y);
     },
   ],
   [
@@ -312,8 +312,8 @@ const drawFunctions = new Map<string, DrawFunction>([
       ctx.lineTo(x + width, y);
       ctx.lineTo(x + width, y + height);
       ctx.moveTo(x, y);
-      ctx.lineTo(x + width / 3, y + height);
-      ctx.lineTo(x + (width * 2) / 3, y);
+      ctx.lineTo(x + width / 6, y + height);
+      ctx.lineTo(x + width / 3, y);
       ctx.moveTo(x + (width * 2) / 3, y);
       ctx.lineTo(x + (width * 2) / 3, y + height);
     },
