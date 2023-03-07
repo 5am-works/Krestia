@@ -55,7 +55,7 @@
     meaning: wind
     quantified_meaning: gust of wind
     roots:
-      combination: [ bep, gelume ]
+      combination: [bep, gelume]
 
   - spelling: lunata
     meaning: star (astronomical)
@@ -64,7 +64,7 @@
   - spelling: gremi
     meaning: sky
     roots:
-      variant: grema 
+      variant: grema
 
   - spelling: temita
     meaning: mountain, hill
@@ -75,31 +75,31 @@
     gloss: ocean
     roots:
       variant: kuna
-  
+
   - spelling: tatrete
     meaning: person, human
-  
+
   - spelling: breka
     meaning: male
-    
+
   - spelling: grike
     meaning: female
-  
+
   - spelling: tote
     meaning: child
-  
+
   - spelling: grita
     meaning: girl
     expanded_form: tote grikel
-  
+
   - spelling: breta
     meaning: boy
     expanded_form: tote brekal
-  
+
   - spelling: rone
     meaning: here
     remarks: Refers to the location of the speaker
-  
+
   - spelling: prine
     meaning: away from here
     remarks: Refers to anywhere where the speaker is not
@@ -113,52 +113,95 @@
 
   - spelling: prete
     meaning: that
-    
+
   - spelling: beseti
     meaning: zodiac sign
-    domains: [ Tatreta ]
-  
+    domains: [Tatreta]
+
   - spelling: enita
     meaning: sheep
-  
+
   - spelling: kilite
     meaning: cattle
-  
+
   - spelling: glinki
     meaning: crab
-  
+
   - spelling: norite
     meaning: lion
-  
+
   - spelling: preta
     meaning: scale (weight)
-  
+
   - spelling: livopi
     meaning: scorpion
-  
+
   - spelling: remiti
     meaning: fish
-  
+
   - spelling: lepa
     meaning: apple
-  
+
   - spelling: meki
     meaning: tree
-  
+
   - spelling: soponi
     meaning: pain
-  
+
   - spelling: kumoma
     meaning: today
-  
+
   - spelling: almeki
     meaning: healthy
-    
+
   - spelling: golepi
     meaning: quiet
-  
+
   - spelling: meka
     meaning: red
+
+  - spelling: krena
+    meaning: light (radiation)
+    remarks: Refers to light itself, and not any light emitters (e.g. lamps)
+
+  - spelling: kreta
+    meaning: light (fixture)
+    roots:
+      derivation: krena
+
+  - spelling: leti
+    meaning: word
+
+  - spelling: moka
+    meaning: open, public
+    gloss: open
+
+  - spelling: rena
+    meaning: dream
+    remarks: Refers to unfulfilled wishes
+
+  - spelling: lumi
+    meaning: forever, eternal
+    gloss: forever
+
+  - spelling: romote
+    meaning: summer
+
+  - spelling: rinome
+    meaning: winter
+
+  - spelling: epi
+    meaning: I (first-person pronoun), we (when plural)
+    gloss: 1P
+
+  - spelling: eti
+    meaning: you (second-person pronoun)
+    gloss: 2P
+    expanded_form: esika sil
+
+  - spelling: eki
+    meaning: he, she, it, they (third-person pronoun)
+    gloss: 3P
 
 associative_nouns:
   - spelling: todri
@@ -174,44 +217,23 @@ associative_nouns:
 
   - spelling: ligri
     meaning: name of
-  
+
   - spelling: votogri
     meaning: twin of
     roots:
-      combination: [ vora, tote ]
+      combination: [vora, tote]
     example_usages:
       - text: Revi votogris Rivi
         translation: Revi is the twin of Rivi.
-  
-  - spelling: krena
-    meaning: light (radiation)
-    remarks: Refers to light itself, and not any light emitters (e.g. lamps)
-    
-  - spelling: kreta
-    meaning: light (fixture)
-    roots:
-      derivation: krena
-  
-  - spelling: leti
-    meaning: word
-  
-  - spelling: moka
-    meaning: open, public
-    gloss: open
-  
-  - spelling: rena
-    meaning: dream
-    remarks: Refers to unfulfilled wishes
-  
-  - spelling: lumi
-    meaning: forever, eternal
-    gloss: forever
-  
-  - spelling: romote
-    meaning: summer
-  
-  - spelling: rinome
-    meaning: winter
+
+  - spelling: liredri
+    meaning: eye of
+
+  - spelling: ligri
+    meaning: name of
+
+  - spelling: pregre
+    meaning: weight of
 
 verbs:
   # Swadesh list
@@ -243,20 +265,20 @@ verbs:
     meaning: to move
     gloss: move
     context: "{0} moves {1} to {2}"
-  
+
   - spelling: delat
     meaning: to be equal to
     gloss: equal
     context: "{0} is equal to {1}"
-  
+
   - spelling: liret
     meaning: to be named
     context: "{0} has the name {1}/{0} is called {1}"
-  
+
   - spelling: lerat
     meaning: to go
     context: "{0} goes to {1}"
-  
+
   - spelling: lemos
     meaning: to come
     context: "{0} comes"
@@ -264,69 +286,69 @@ verbs:
     remarks: >
       Refers to going to the location of the speaker. For other places, use
       "erat" instead.
-      
+
   - spelling: metet
     meaning: to stand
     context: "{0} is standing at/on {1}"
-  
+
   - spelling: volot
     meaning: to sit
     context: "{0} is sitting at/on {1}"
-  
+
   - spelling: geset
     meaning: to lie down, to lay
     gloss: lie
     context: "{0} is laying down at/on {1}"
-  
+
   - spelling: livet
     meaning: to look at
     gloss: look
     context: "{0} looks at {1}"
-  
+
   - spelling: verot
     meaning: to listen to
     gloss: listen
     context: "{0} listens to {1}"
-  
+
   - spelling: demit
     meaning: to play, to have fun
     gloss: play
     context: "{0} plays {1}"
-  
+
   - spelling: belep
     meaning: to give
     context: "{0} gives {1} to {2}"
-    
+
   - spelling: merit
     meaning: to know, to be familiar with
     context: "{0} knows about {1}"
-  
+
   - spelling: bup
     meaning: to speak, to say
     context: "{0} says {1} to {2}"
-  
+
   - spelling: tesip
     meaning: to push, to press
     context: "{0} pushes/presses {1} against/towards {2}"
-    
+
   - spelling: posip
     meaning: to pull, to draw
     context: "{0} pulls/draws {1} away from {2}"
-  
+
   - spelling: silip
     meaning: to shoot
     context: "{0} shoots {1} towards {2}"
-  
+
   - spelling: moris
     meaning: to flash, to flicker, to fade in and out
     context: "{0} flashes"
     gloss: flash
-  
+
   - spelling: nobret
     meaning: to differ from
     context: "{0} is different from {1}"
     gloss: differ
-  
+
   - spelling: ramet
     meaning: to fade away, to gradually disappear
     context: "{0} fades away from {1}"
@@ -337,84 +359,84 @@ names:
     meaning: the sun (of Earth)
     roots:
       clipping: lunata
-  
+
   - spelling: Rima
     meaning: the moon (of Earth)
     roots:
       clipping: rimata
-  
+
   - spelling: Enita
     meaning: Aries (zodiac)
     roots:
       copy: enita
-    domains: [ Tatreta ]
-  
+    domains: [Tatreta]
+
   - spelling: Kilito
     meaning: Taurus (zodiac)
     roots:
       variant: kilite
-    domains: [ Tatreta ]
-    
+    domains: [Tatreta]
+
   - spelling: Votogri
     meaning: Gemini (zodiac)
     roots:
       copy: votogri
-    domains: [ Tatreta ]
+    domains: [Tatreta]
 
   - spelling: Gliniki
     meaning: Cancer (zodiac)
     roots:
       copy: gliniki
-    domains: [ Tatreta ]
-    
+    domains: [Tatreta]
+
   - spelling: Norita
     meaning: Leo (zodiac)
     roots:
       variant: norite
-    domains: [ Tatreta ]
-    
+    domains: [Tatreta]
+
   - spelling: Astarea
     meaning: Virgo (zodiac)
     roots:
       foreign: Astraea
-    domains: [ Tatreta ]
+    domains: [Tatreta]
 
   - spelling: Preta
     meaning: Libra (zodiac)
     roots:
       copy: preta
-    domains: [ Tatreta ]
+    domains: [Tatreta]
 
   - spelling: Livopi
     meaning: Scorpio (zodiac)
     roots:
       copy: livopi
-    domains: [ Tatreta ]
-    
+    domains: [Tatreta]
+
   - spelling: Silisa
     meaning: Sagittarius (zodiac)
     roots:
       derivation: silisaa
-    domains: [ Tatreta ]
+    domains: [Tatreta]
 
   - spelling: Kaprikorno
     meaning: Capricorn (zodiac)
     roots:
       foreign: kaprikorno
-    domains: [ Tatreta ]
+    domains: [Tatreta]
 
   - spelling: Glakuna
     meaning: Aquarius (zodiac)
     roots:
       contraction: glatrosaa kuna
-    domains: [ Tatreta ]
+    domains: [Tatreta]
 
   - spelling: Remivora
     meaning: Pisces (zodiac)
     roots:
       contraction: remiti sel vora
-    domains: [ Tatreta ]
-    
+    domains: [Tatreta]
+
 other_words:
   # Numbers
   - spelling: mi
@@ -496,24 +518,11 @@ other_words:
   - spelling: gina
     meaning: 9, nine (terminal)
     gloss: 9
-  
-  - spelling: epi
-    meaning: I (first-person pronoun), we (when plural)
-    gloss: 1P
-
-  - spelling: eti
-    meaning: you (second-person pronoun)
-    gloss: 2P
-    expanded_form: esika sil
-
-  - spelling: eki
-    meaning: he, she, it, they (third-person pronoun)
-    gloss: 3P
 
 related_words:
-  - [ mina, mika ]
-  - [ epi, eti, eki ]
-  - [ posip, tesip ]
-  - [ rone, prine ]
-  - [ krena, kreta ]
-  - [ romote, rinome ]
+  - [mina, mika]
+  - [epi, eti, eki]
+  - [posip, tesip]
+  - [rone, prine]
+  - [krena, kreta]
+  - [romote, rinome]
