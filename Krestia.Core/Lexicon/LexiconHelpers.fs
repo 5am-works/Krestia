@@ -15,49 +15,94 @@ let private newWord spelling meaning wordType =
      AdditionalInfo = AdditionalInfo.NoInfo
      WordType = wordType }
 
-type NounBuilder(spelling: string) =
+let private slotCount word =
+   match word.WordType with
+   | Verb0 -> 0
+   | Verb1 -> 1
+   | Verb2
+   | Verb12 -> 2
+   | Verb3
+   | Verb13
+   | Verb23
+   | Verb123 -> 3
+   | _ -> failwith $"Not a verb: {word.Spelling}"
+
+type WordBuilder(spelling: string, wordType: WordType) =
    member _.Yield _ = ()
+   member _.Run(word: Word) =
+      if isVerb word then
+         match word.AdditionalInfo with
+         | AdditionalInfo.Verb _ -> ()
+         | _ -> failwith $"{spelling} needs verb info"
+      word
 
    [<CustomOperation("meaning")>]
-   member _.DefineMeaning((), meaning: string) =
-      newWord spelling meaning Noun
+   member _.DefineMeaning((), meaning: string) = newWord spelling meaning wordType
 
    [<CustomOperation("qualified")>]
-   member _.DefineQualifiedMeaning(noun: Word, qualified: string) =
-      { noun with QuantifiedMeaning = Some qualified }
+   member _.DefineQualifiedMeaning(word: Word, qualified: string) =
+      { word with
+         QuantifiedMeaning = Some qualified }
 
-let noun spelling = NounBuilder spelling
+   [<CustomOperation("gloss")>]
+   member _.DefineGloss(word: Word, gloss: string) = { word with Gloss = Some gloss }
 
-type VerbBuilder(spelling: string) =
-   let verbType =
-      match spelling with
-      | _ when spelling.EndsWith("m") -> Verb0
-      | _ when spelling.EndsWith("s") -> Verb1
-      | _ when spelling.EndsWith("t") -> Verb12
-      | _ when spelling.EndsWith("p") -> Verb123
-      | _ when spelling.EndsWith("g") -> Verb2
-      | _ when spelling.EndsWith("n") -> Verb3
-      | _ when spelling.EndsWith("v") -> Verb23
-      | _ when spelling.EndsWith("k") -> Verb13
-      | _ -> failwith $"Not a verb: {spelling}"
+   [<CustomOperation("expanded")>]
+   member _.DefineExpandedForm(word: Word, expanded: string) =
+      { word with
+         ExpandedForm = Some expanded }
 
-   member _.Yield _ = ()
+   [<CustomOperation("etymology")>]
+   member _.DefineEtymology(word: Word, etymology: Etymology) =
+      { word with Etymology = Some etymology }
 
-   [<CustomOperation("meaning")>]
-   member _.DefineMeaning((), meaning: string) : Word =
-      newWord spelling meaning verbType
+   [<CustomOperation("remarks")>]
+   member _.DefineRemarks(word: Word, remarks: string) = { word with Remarks = Some remarks }
 
-let verb spelling = VerbBuilder spelling
+   [<CustomOperation("example")>]
+   member _.AddExampleUsage(word: Word, exampleUsage: ExampleUsage) =
+      { word with
+         ExampleUsages = exampleUsage :: word.ExampleUsages }
+
+   [<CustomOperation("domains")>]
+   member _.DefineDomains(word: Word, domains: string list) = { word with Domains = domains }
+
+   [<CustomOperation("syntax")>]
+   member _.DefineSyntax(word: Word, syntax: string) =
+      match word.AdditionalInfo with
+      | AdditionalInfo.NoInfo when isVerb word ->
+         { word with
+            AdditionalInfo = AdditionalInfo.Verb { Syntax = syntax; SlotRemarks = [] } }
+      | _ when isVerb word -> failwith $"Verb info already defined for {spelling}"
+      | _ -> failwith $"Cannot attach verb info to {spelling}"
+
+   [<CustomOperation("slotRemarks")>]
+   member _.DefineSlotRemarks(word: Word, remarks: string option list) =
+      match word.AdditionalInfo with
+      | AdditionalInfo.Modifier _
+      | AdditionalInfo.NoInfo -> failwith $"{spelling} has no verb info defined"
+      | AdditionalInfo.Verb verbInfo ->
+         if remarks.Length <> slotCount word then
+            failwith $"{spelling} does not have the correct number of slot remarks"
+         else
+            AdditionalInfo.Verb { verbInfo with SlotRemarks = remarks }
+
+let word (spelling: string) =
+   match findWordTypeOf spelling with
+   | Some wordType -> WordBuilder(spelling, wordType)
+   | None -> failwith $"Invalid word: {spelling}"
+
+let verbInfo syntax = { Syntax = syntax; SlotRemarks = [] }
 
 type LexiconBuilder() =
    member _.Yield word = word
    member _.Run(lexicon: Lexicon) = lexicon
 
    member _.Delay(f: unit -> Lexicon) = f ()
-   member _.Delay(f: unit -> Word) =
-      { Words = [ f () ] }
+   member _.Delay(f: unit -> Word) = { Words = [ f () ] }
 
    member _.Combine(word: Word, lexicon: Lexicon) =
-      { lexicon with Words = word :: lexicon.Words }
+      { lexicon with
+         Words = word :: lexicon.Words }
 
 let lexicon = LexiconBuilder()

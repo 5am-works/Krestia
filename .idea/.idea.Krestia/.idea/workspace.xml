@@ -13,10 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Core/Krestia.Core.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Krestia.Core.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "D:\\Packages\\npm\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "SolutionBuilderGeneralOptionsPage",
+    "settings.editor.selected.configurable": "preferences.sourceCode.F#",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\JetBrains Rider 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
@@ -248,7 +248,7 @@
       <workItem from="1676268884270" duration="2241000" />
       <workItem from="1676327703314" duration="88000" />
       <workItem from="1681893580986" duration="4922000" />
-      <workItem from="1681938582888" duration="1693000" />
+      <workItem from="1681938582888" duration="4622000" />
     </task>
     <servers />
   </component>

@@ -4,11 +4,17 @@ open Krestia.Core.Lexicon.LexiconHelpers
 
 let lexicon =
    lexicon {
-      noun "kuna" { meaning "water"; qualified "drop of water" }
-      noun "gremi" { meaning "sky" }
+      word "kuna" {
+         meaning "water"
+         qualified "drop of water"
+      }
 
-      verb "bet" { meaning "to move" }
-      verb "liret" { meaning "to look at" }
+      word "gremi" { meaning "sky" }
+      word "bet" { meaning "to move" }
+      word "liret" {
+         meaning "to look at"
+         syntax "{0} looks at {1}"
+      }
    }
 
 let printLexicon () = printfn $"{lexicon}"
