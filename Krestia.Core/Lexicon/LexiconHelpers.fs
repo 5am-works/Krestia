@@ -1,39 +1,51 @@
 ﻿module Krestia.Core.Lexicon.LexiconHelpers
 
-type Noun =
-   { Spelling: string
-     Meaning: string
-     QuantifiedMeaning: string option
-     Gloss: string option }
+open Krestia.Core.Lexicon.Types
 
-type Verb = { Spelling: string; Meaning: string }
-
-type Lexicon = { Nouns: Noun list; Verbs: Verb list }
+let private newWord spelling meaning wordType =
+   { Spelling = spelling
+     Meaning = meaning
+     QuantifiedMeaning = None
+     Gloss = None
+     ExpandedForm = None
+     Etymology = None
+     Remarks = None
+     ExampleUsages = []
+     Domains = []
+     AdditionalInfo = AdditionalInfo.NoInfo
+     WordType = wordType }
 
 type NounBuilder(spelling: string) =
    member _.Yield _ = ()
 
    [<CustomOperation("meaning")>]
    member _.DefineMeaning((), meaning: string) =
-      { Spelling = spelling
-        Meaning = meaning
-        QuantifiedMeaning = None
-        Gloss = None }
+      newWord spelling meaning Noun
 
    [<CustomOperation("qualified")>]
-   member _.DefineQualifiedMeaning(noun: Noun, qualified: string) =
-      { noun with
-         QuantifiedMeaning = Some qualified }
+   member _.DefineQualifiedMeaning(noun: Word, qualified: string) =
+      { noun with QuantifiedMeaning = Some qualified }
 
 let noun spelling = NounBuilder spelling
 
 type VerbBuilder(spelling: string) =
+   let verbType =
+      match spelling with
+      | _ when spelling.EndsWith("m") -> Verb0
+      | _ when spelling.EndsWith("s") -> Verb1
+      | _ when spelling.EndsWith("t") -> Verb12
+      | _ when spelling.EndsWith("p") -> Verb123
+      | _ when spelling.EndsWith("g") -> Verb2
+      | _ when spelling.EndsWith("n") -> Verb3
+      | _ when spelling.EndsWith("v") -> Verb23
+      | _ when spelling.EndsWith("k") -> Verb13
+      | _ -> failwith $"Not a verb: {spelling}"
+
    member _.Yield _ = ()
 
    [<CustomOperation("meaning")>]
-   member _.DefineMeaning((), meaning: string) : Verb =
-      { Spelling = spelling
-        Meaning = meaning }
+   member _.DefineMeaning((), meaning: string) : Word =
+      newWord spelling meaning verbType
 
 let verb spelling = VerbBuilder spelling
 
@@ -42,14 +54,10 @@ type LexiconBuilder() =
    member _.Run(lexicon: Lexicon) = lexicon
 
    member _.Delay(f: unit -> Lexicon) = f ()
-   member _.Delay(f: unit -> Noun) = { Nouns = [ f () ]; Verbs = [] }
-   member _.Delay(f: unit -> Verb) = { Nouns = []; Verbs = [ f () ] }
+   member _.Delay(f: unit -> Word) =
+      { Words = [ f () ] }
 
-   member _.Combine(noun: Noun, lexicon: Lexicon) =
-      { lexicon with
-         Nouns = noun :: lexicon.Nouns }
-   
-   member _.Combine(verb: Verb, lexicon: Lexicon) =
-      { lexicon with Verbs = verb :: lexicon.Verbs }
+   member _.Combine(word: Word, lexicon: Lexicon) =
+      { lexicon with Words = word :: lexicon.Words }
 
 let lexicon = LexiconBuilder()

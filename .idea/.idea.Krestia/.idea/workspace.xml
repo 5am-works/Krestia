@@ -13,15 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Krestia.Core.Tests/Krestia.Core.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Core.Tests/LexiconTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Core.Tests/Usings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Core/Krestia.Core.fsproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Krestia.Core/Library.fs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Core/Krestia.Core.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Krestia.Core.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +53,7 @@
   <component name="ProjectId" id="2Ae1wNVtufruTLN9zPOTaknYudM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -66,6 +62,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,7 +94,7 @@
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="0" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions))))))))))" />
+      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions)))))))))))" />
       <option name="PROJECT_TFM" value="net6.0" />
       <option name="FUNCTION_NAMES" value="" />
       <browser url="http://localhost:7071" />
@@ -250,7 +247,8 @@
       <workItem from="1676267488993" duration="783000" />
       <workItem from="1676268884270" duration="2241000" />
       <workItem from="1676327703314" duration="88000" />
-      <workItem from="1681893580986" duration="4831000" />
+      <workItem from="1681893580986" duration="4922000" />
+      <workItem from="1681938582888" duration="1693000" />
     </task>
     <servers />
   </component>
