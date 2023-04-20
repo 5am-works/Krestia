@@ -29,11 +29,13 @@ let private slotCount word =
 
 type WordBuilder(spelling: string, wordType: WordType) =
    member _.Yield _ = ()
+
    member _.Run(word: Word) =
       if isVerb word then
          match word.AdditionalInfo with
          | AdditionalInfo.Verb _ -> ()
          | _ -> failwith $"{spelling} needs verb info"
+
       word
 
    [<CustomOperation("meaning")>]
@@ -60,9 +62,12 @@ type WordBuilder(spelling: string, wordType: WordType) =
    member _.DefineRemarks(word: Word, remarks: string) = { word with Remarks = Some remarks }
 
    [<CustomOperation("example")>]
-   member _.AddExampleUsage(word: Word, exampleUsage: ExampleUsage) =
+   member _.AddExampleUsage(word: Word, exampleText: string, translation: string) =
       { word with
-         ExampleUsages = exampleUsage :: word.ExampleUsages }
+         ExampleUsages =
+            { Text = exampleText
+              Translation = translation }
+            :: word.ExampleUsages }
 
    [<CustomOperation("domains")>]
    member _.DefineDomains(word: Word, domains: string list) = { word with Domains = domains }
@@ -86,6 +91,33 @@ type WordBuilder(spelling: string, wordType: WordType) =
             failwith $"{spelling} does not have the correct number of slot remarks"
          else
             AdditionalInfo.Verb { verbInfo with SlotRemarks = remarks }
+
+   [<CustomOperation("modifies")>]
+   member _.DefineModifiableTypes(word: Word, types: WordType list) =
+      match word.AdditionalInfo with
+      | AdditionalInfo.NoInfo when word.WordType = Modifier ->
+         { word with
+            AdditionalInfo =
+               AdditionalInfo.Modifier
+                  { ModifiableTypes = Set.ofList types
+                    Attachments = [] } }
+      | AdditionalInfo.Modifier _ -> failwith $"{spelling} already has modifier info attached"
+      | _ -> failwith $"{spelling} is not a modifier"
+
+   [<CustomOperation("attachments")>]
+   member _.DefineAttachments(word: Word, attachment: (WordType * string option) list) =
+      match word.AdditionalInfo with
+      | AdditionalInfo.Modifier modifierInfo ->
+         { word with
+            AdditionalInfo =
+               AdditionalInfo.Modifier
+                  { modifierInfo with
+                     Attachments =
+                        attachment
+                        |> List.map (fun (wordType, remarks) ->
+                           { WordType = wordType
+                             Remarks = remarks }) } }
+      | _ -> failwith $"{spelling} has no modifier info for attachments"
 
 let word (spelling: string) =
    match findWordTypeOf spelling with

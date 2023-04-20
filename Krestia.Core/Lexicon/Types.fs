@@ -19,7 +19,15 @@ type WordType =
    | Compound
    | Keyword
 
-type Etymology = Combination of string list
+type Etymology =
+   | Combination of string list
+   | Variant of string
+   | Metaphor of string
+   | Clipping of string
+   | Copy of string
+   | Contraction of string
+   | Foreign of string
+   | Derivation of string
 
 type ExampleUsage = { Text: string; Translation: string }
 
@@ -75,14 +83,16 @@ let private nounEndings =
 
 let findWordTypeOf (spelling: string) =
    match spelling with
-   | _ when spelling.EndsWith("m") -> Some Verb0
-   | _ when spelling.EndsWith("s") -> Some Verb1
-   | _ when spelling.EndsWith("t") -> Some Verb12
-   | _ when spelling.EndsWith("p") -> Some Verb123
-   | _ when spelling.EndsWith("g") -> Some Verb2
-   | _ when spelling.EndsWith("n") -> Some Verb3
-   | _ when spelling.EndsWith("v") -> Some Verb23
-   | _ when spelling.EndsWith("k") -> Some Verb13
+   | _ when spelling.EndsWith('m') -> Some Verb0
+   | _ when spelling.EndsWith('s') -> Some Verb1
+   | _ when spelling.EndsWith('t') -> Some Verb12
+   | _ when spelling.EndsWith('p') -> Some Verb123
+   | _ when spelling.EndsWith('g') -> Some Verb2
+   | _ when spelling.EndsWith('n') -> Some Verb3
+   | _ when spelling.EndsWith('v') -> Some Verb23
+   | _ when spelling.EndsWith('k') -> Some Verb13
+   | _ when spelling.EndsWith('l') -> Some Modifier
+   | _ when spelling.EndsWith("dre") || spelling.EndsWith("gre") -> Some AssociativeNoun
    | _ when List.exists (fun (suffix: string) -> spelling.EndsWith suffix) nounEndings -> Some Noun
    | _ -> None
 

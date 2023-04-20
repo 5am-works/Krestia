@@ -1,5 +1,6 @@
 ﻿module Krestia.Core.Lexicon.Lexicon
 
+open Krestia.Core.Lexicon.Types
 open Krestia.Core.Lexicon.LexiconHelpers
 
 let lexicon =
@@ -10,10 +11,13 @@ let lexicon =
       }
 
       word "gremi" { meaning "sky" }
-      word "bet" { meaning "to move" }
       word "liret" {
          meaning "to look at"
          syntax "{0} looks at {1}"
+      }
+      word "konal" {
+         meaning "another"
+         modifies [ Noun ]
       }
    }
 
