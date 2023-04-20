@@ -19,6 +19,9 @@ let lexicon =
          meaning "another"
          modifies [ Noun ]
       }
+      
+      related [ "mina"; "mika" ]
+      related [ "epi"; "eti"; "eki" ]
    }
 
 let printLexicon () = printfn $"{lexicon}"

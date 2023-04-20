@@ -130,11 +130,16 @@ type LexiconBuilder() =
    member _.Yield word = word
    member _.Run(lexicon: Lexicon) = lexicon
 
+   member _.Delay(_: unit -> unit) = { Words = []; RelatedWords = [] }
    member _.Delay(f: unit -> Lexicon) = f ()
-   member _.Delay(f: unit -> Word) = { Words = [ f () ] }
+   member _.Delay(f: unit -> Word) = { Words = [ f () ]; RelatedWords = [] }
 
    member _.Combine(word: Word, lexicon: Lexicon) =
       { lexicon with
          Words = word :: lexicon.Words }
+      
+   [<CustomOperation("related")>]
+   member _.DefineRelatedWords(lexicon: Lexicon, words: string list) =
+      { lexicon with RelatedWords = words :: lexicon.RelatedWords }
 
 let lexicon = LexiconBuilder()

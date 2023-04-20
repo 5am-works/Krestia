@@ -62,7 +62,9 @@ type Word =
      AdditionalInfo: AdditionalInfo
      WordType: WordType }
 
-type Lexicon = { Words: Word list }
+type Lexicon =
+   { Words: Word list
+     RelatedWords: string list list }
 
 let private nounEndings =
    [ "pa"
