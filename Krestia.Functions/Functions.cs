@@ -1,48 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Krestia.Core;
-using Krestia.Core.Lexicon;
 using Krestia.Web.Common;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.FSharp.Core;
-using Newtonsoft.Json;
 using static Krestia.Core.Lexicon.Lexicon;
 
 namespace Krestia.Functions;
 
 public static class Functions {
-   [FunctionName("TestFunction")]
-   public static async Task<IActionResult> RunAsync(
-      [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]
-      HttpRequest req, ILogger log) {
-      log.LogInformation("C# HTTP trigger function processed a request");
-
-      string? name = req.Query["name"];
-
-      var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-      dynamic data = JsonConvert.DeserializeObject(requestBody);
-      name ??= data?.name;
-
-      return name != null
-         ? new OkObjectResult($"Hello, {name}")
-         : new BadRequestObjectResult(
-            "Please pass a name on the query string or in the request body");
-   }
-
-   [FunctionName("SearchFunction")]
-   [Produces(typeof(SearchResponse))]
-   public static IActionResult Search(
-      [HttpTrigger(AuthorizationLevel.Anonymous, "get",
-         Route = "search/{query}")]
-      HttpRequest request, string query) {
+   [Function("SearchFunction")]
+   public static async Task<HttpResponseData> Search(
+      [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "search/{query}")]
+      HttpRequestData request, string query) {
       var lowercase = query.ToLowerInvariant();
       var decomposedResults = DecomposeWords(query);
 
@@ -56,44 +31,47 @@ public static class Functions {
                   StringComparison.InvariantCultureIgnoreCase) == true
          orderby Relevance(word, query)
          select new WordWithMeaning(word.Spelling, word.Meaning);
-      return new OkObjectResult(new SearchResponse {
+      var response = request.CreateResponse();
+      await response.WriteAsJsonAsync(new SearchResponse {
          Results = words.ToList(),
          DecomposedResults = decomposedResults.ToList(),
       });
+      return response;
    }
 
-   [FunctionName("GetWordFunction")]
-   [Produces(typeof(WordResponse))]
-   public static IActionResult GetWord(
+   [Function("GetWordFunction")]
+   public static async Task<HttpResponseData> GetWord(
       [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "word/{word}")]
-      HttpRequest request, string word) {
+      HttpRequestData request, string word) {
       var result = lexicon.Find(word);
       if (result == null) {
-         return new NotFoundResult();
+         return request.CreateResponse(HttpStatusCode.NotFound);
       }
 
-      return new OkObjectResult(result.ToWordResponse());
+      var response = request.CreateResponse();
+      await response.WriteAsJsonAsync(result.ToWordResponse());
+      return response;
    }
 
-   [FunctionName("AlphabeticalWordListFunction")]
-   [Produces(typeof(IEnumerable<WordWithMeaning>))]
-   public static IActionResult GetAlphabeticalWordList(
+   [Function("AlphabeticalWordListFunction")]
+   public static async Task<HttpResponseData> GetAlphabeticalWordList(
       [HttpTrigger(AuthorizationLevel.Anonymous, "get",
          Route = "wordlist/alphabetical")]
-      HttpRequest request) {
+      HttpRequestData request) {
       var words =
          from word in lexicon.Words
          orderby word.Spelling
          select new WordWithMeaning(word.Spelling, word.Meaning);
-      return new OkObjectResult(words);
+      var response = request.CreateResponse();
+      await response.WriteAsJsonAsync(words);
+      return response;
    }
 
-   [FunctionName("WordTypeWordListFunction")]
-   [Produces(typeof(Dictionary<string, IEnumerable<WordWithMeaning>>))]
-   public static IActionResult GetWordTypeWordList(
+   [Function("WordTypeWordListFunction")]
+   public static async Task<HttpResponseData> GetWordTypeWordList(
       [HttpTrigger(AuthorizationLevel.Anonymous, "get",
          Route = "wordlist/wordtype")]
-      HttpRequest request) {
+      HttpRequestData request) {
       var words =
          from word in lexicon.Words
          group word by word.WordCategory()
@@ -103,7 +81,9 @@ public static class Functions {
          group => group.Key,
          group => group.Select(word =>
             new WordWithMeaning(word.Spelling, word.Meaning)));
-      return new OkObjectResult(results);
+      var response = request.CreateResponse();
+      await response.WriteAsJsonAsync(response);
+      return response;
    }
 
    private static IEnumerable<DecomposedResult> DecomposeWords(string query) {

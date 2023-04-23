@@ -13,9 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Krestia.Functions/LexiconHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Krestia.Functions/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Client/wwwroot/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Client/wwwroot/appsettings.Development.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Functions/Functions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/Functions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Functions/Krestia.Functions.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/Krestia.Functions.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +72,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Packages\\npm\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.F#&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\JetBrains Rider 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -84,23 +86,24 @@
 }</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Krestia.Client">
     <configuration name="Krestia.Functions" type="AzureFunctionsHost" factoryName="Azure Functions host">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Krestia.Functions/bin/Debug/net6.0/Krestia.Functions.dll" />
-      <option name="PROGRAM_PARAMETERS" value="host start --pause-on-error --verbose" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Krestia.Functions/bin/Debug/net6.0" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Krestia.Functions/bin/Debug/net7.0/Krestia.Functions.dll" />
+      <option name="PROGRAM_PARAMETERS" value="host start --pause-on-error" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Krestia.Functions/bin/Debug/net7.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/Krestia.Functions/Krestia.Functions.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
-      <option name="PROJECT_ARGUMENTS_TRACKING" value="0" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions))))))))))))))))" />
-      <option name="PROJECT_TFM" value="net6.0" />
+      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions))" />
+      <option name="PROJECT_TFM" value="net7.0" />
       <option name="FUNCTION_NAMES" value="" />
       <browser url="http://localhost:7071" />
       <method v="2">
         <option name="BuildFunctionsProject" enabled="true" />
+        <option name="RunAzuriteTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Krestia SWA" type="CompoundRunConfigurationType">
@@ -109,9 +112,9 @@
       <method v="2" />
     </configuration>
     <configuration name="Kerstia.Parser.Tests" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Kerstia.Parser.Tests/bin/Debug/net6.0/Kerstia.Parser.Tests.dll" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Krestia.Parser.Tests/bin/Debug/net7.0/Krestia.Core.Tests.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Kerstia.Parser.Tests/bin/Debug/net6.0" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Krestia.Parser.Tests/bin/Debug/net7.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -121,7 +124,7 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="net6.0" />
+      <option name="PROJECT_TFM" value="net7.0" />
       <method v="2">
         <option name="Build" projectName="Selected project" />
       </method>
@@ -145,21 +148,6 @@
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Krestia.Client/Krestia.Client.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
       <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <option name="USE_MONO" value="0" />
-      <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
-      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
-      <option name="SEND_DEBUG_REQUEST" value="1" />
-      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
-      <method v="2">
-        <option name="Build" />
-      </method>
-    </configuration>
-    <configuration name="Krestia.Functions" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Krestia.Functions/Krestia.Functions.csproj" />
-      <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
-      <option name="LAUNCH_PROFILE_NAME" value="Krestia.Functions" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
@@ -204,7 +192,6 @@
     <list>
       <item itemvalue=".NET Launch Settings Profile.Krestia.Client" />
       <item itemvalue=".NET Launch Settings Profile.Krestia.Client: IIS Express" />
-      <item itemvalue=".NET Launch Settings Profile.Krestia.Functions" />
       <item itemvalue=".NET Launch Settings Profile.Krestia.Server" />
       <item itemvalue=".NET Launch Settings Profile.Krestia.Server: IIS Express" />
       <item itemvalue=".NET Project.Kerstia.Parser.Tests" />
@@ -257,6 +244,11 @@
       <workItem from="1682228605697" duration="2542000" />
       <workItem from="1682241349930" duration="20000" />
       <workItem from="1682241473187" duration="433000" />
+      <workItem from="1682241984713" duration="105000" />
+      <workItem from="1682242167388" duration="86000" />
+      <workItem from="1682242343608" duration="211000" />
+      <workItem from="1682242605417" duration="53000" />
+      <workItem from="1682242682731" duration="2331000" />
     </task>
     <servers />
   </component>
