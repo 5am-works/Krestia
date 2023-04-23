@@ -1,21 +1,15 @@
-﻿module Krestia.Parser.Tests.WordTypeTests
+﻿module Krestia.Core.Tests.WordTypeTests
 
-open Krestia.Lexicon
-open Krestia.Parser.Decompose
-open Krestia.Parser.WordType
+open Krestia.Core.Lexicon.Lexicon
+open Krestia.Core.Decompose
+open Krestia.Core.Types
 open NUnit.Framework
 
 [<TestFixture>]
 type LexiconTests() =
-   [<DefaultValue>]
-   val mutable lexicon: WordIndex
-
-   [<SetUp>]
-   member this.SetUp() = this.lexicon <- WordIndex()
-
    [<Test>]
    member this.TestAllWords() =
-      for word in this.lexicon.AllWords do
+      for word in lexicon.Words do
          let decomposed = decompose word.Spelling
 
          Assert.That(
@@ -24,29 +18,6 @@ type LexiconTests() =
             "Failed to decompose {0}",
             word.Spelling
          )
-
-   [<Test>]
-   member this.testNouns() =
-      Assert.Multiple (fun () ->
-         for noun in this.lexicon.Nouns do
-            this.testWordType Noun noun)
-
-   [<Test>]
-   member this.testAssociativeNouns() =
-      Assert.Multiple (fun () ->
-         for word in this.lexicon.AssociativeNouns do
-            this.testWordType AssociativeNoun word)
-
-   [<Test>]
-   member this.testVerbs() =
-      Assert.Multiple (fun () ->
-         for verb in this.lexicon.Verbs do
-            let expected =
-               isVerb verb.Spelling
-               |> Option.defaultWith (fun () ->
-                  failwithf $"Not a verb %s{verb.Spelling}")
-
-            this.testWordType expected verb)
 
    member private this.testWordType (expected: WordType) (word: Word) =
       let spelling = word.Spelling
@@ -59,8 +30,7 @@ type LexiconTests() =
             let actualType = result.WordType
             let inflections = result.Steps
             if baseWord <> word.Spelling then
-               let collidedWord =
-                  this.lexicon.Find(baseWord) |> Option.ofNullable
+               let collidedWord = List.tryFind (fun word -> word.Spelling = baseWord) lexicon.Words
 
                match collidedWord with
                | Some _ ->

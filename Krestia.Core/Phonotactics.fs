@@ -1,4 +1,4 @@
-﻿module Krestia.Parser.Phonotactics
+﻿module Krestia.Core.Phonotactics
 
 open System
 

@@ -13,7 +13,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Core/Krestia.Core.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Krestia.Core.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Types.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Functions/Functions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/Functions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Functions/Krestia.Functions.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/Krestia.Functions.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Functions/ResponseHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/ResponseHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon.Tests/Krestia.Lexicon.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon.Tests/Krestia.Lexicon.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/Krestia.Lexicon.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/LexiconLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/WordIndex.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/lexicon.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/migrate.rb" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/migrate.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser.Tests/Krestia.Parser.Tests.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser.Tests/Krestia.Parser.Tests.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Decompose.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Inflections.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Krestia.Parser.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Krestia.Parser.fsproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Phonotactics.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Phonotactics.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +56,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Krestia.Client/wwwroot/css/bootstrap/bootstrap.min.css.map" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon2.fs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -55,31 +77,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "trunk",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "D:\\Packages\\npm\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.sourceCode.F#",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\JetBrains Rider 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;trunk&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Packages\\npm\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.F#&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\JetBrains Rider 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Sam\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Sam\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Sam\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Sam\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Sam\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Sam\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Krestia.Client">
     <configuration name="Krestia.Functions" type="AzureFunctionsHost" factoryName="Azure Functions host">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Krestia.Functions/bin/Debug/net6.0/Krestia.Functions.dll" />
@@ -93,7 +115,7 @@
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="0" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions)))))))))))))" />
+      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions))))))))))))))" />
       <option name="PROJECT_TFM" value="net6.0" />
       <option name="FUNCTION_NAMES" value="" />
       <browser url="http://localhost:7071" />
@@ -251,7 +273,8 @@
       <workItem from="1682023360711" duration="2610000" />
       <workItem from="1682202253292" duration="591000" />
       <workItem from="1682202870207" duration="2460000" />
-      <workItem from="1682216692318" duration="1260000" />
+      <workItem from="1682216692318" duration="3792000" />
+      <workItem from="1682228605697" duration="2242000" />
     </task>
     <servers />
   </component>

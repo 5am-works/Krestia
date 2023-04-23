@@ -1,6 +1,6 @@
 ﻿module Krestia.Core.Lexicon.LexiconHelpers
 
-open Krestia.Core.Lexicon.Types
+open Krestia.Core.Types
 
 let private newWord spelling meaning wordType =
    { Spelling = spelling

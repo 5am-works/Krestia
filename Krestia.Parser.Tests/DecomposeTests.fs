@@ -1,8 +1,8 @@
-﻿module Krestia.Parser.Tests.DecomposeTests
+﻿module Krestia.Core.Tests.DecomposeTests
 
 open NUnit.Framework
-open Krestia.Parser.WordType
-open Krestia.Parser.Decompose
+open Krestia.Core.Types
+open Krestia.Core.Decompose
 
 [<TestFixture>]
 type DecomposeTests() =

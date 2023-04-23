@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
 
         <IsPackable>false</IsPackable>
         <GenerateProgramFile>false</GenerateProgramFile>
-        <RootNamespace>Krestia.Parser.Tests</RootNamespace>
+        <RootNamespace>Krestia.Core.Tests</RootNamespace>
+        <AssemblyName>Krestia.Core.Tests</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
@@ -22,8 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Krestia.Lexicon\Krestia.Lexicon.csproj" />
-      <ProjectReference Include="..\Krestia.Parser\Krestia.Parser.fsproj" />
+      <ProjectReference Include="..\Krestia.Core\Krestia.Core.fsproj" />
     </ItemGroup>
 
 </Project>

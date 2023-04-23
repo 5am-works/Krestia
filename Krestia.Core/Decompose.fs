@@ -1,8 +1,8 @@
-﻿module Krestia.Parser.Decompose
+﻿module Krestia.Core.Decompose
 
 open System
-open Krestia.Parser.Inflections
-open Krestia.Parser.WordType
+open Krestia.Core.Inflections
+open Krestia.Core.Types
 
 type DecomposedWord =
    { BaseWord: string

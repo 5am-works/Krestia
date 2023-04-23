@@ -1,4 +1,4 @@
-﻿module Krestia.Core.Lexicon.Types
+﻿module Krestia.Core.Types
 
 open System
 
@@ -20,6 +20,40 @@ type WordType =
    | TerminalDigit
    | Compound
    | Keyword
+
+type Inflection =
+   | Definite
+   | Possession
+   | PredicativeIdentity
+   | AttributiveIdentity
+   | Gerund
+   | Instance
+   | Existence
+   | Lone
+   | Progressive
+   | Perfect
+   | Intention
+   | Hypothetical
+   | Desiderative
+   | Imperative
+   | Hortative
+   | Optative
+   | Argument1
+   | Argument2
+   | Argument3
+   | Shift1
+   | Shift2
+   | Shift3
+   | Partial1
+   | Partial2
+   | Partial3
+   | Quality
+   | Uninflectable
+   | Prefixed
+
+type VerbAttribute =
+   | Negation
+   | Capacity
 
 type Etymology =
    | Combination of string list

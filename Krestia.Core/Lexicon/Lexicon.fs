@@ -1,6 +1,6 @@
 module Krestia.Core.Lexicon.Lexicon
 
-open Krestia.Core.Lexicon.Types
+open Krestia.Core.Types
 open Krestia.Core.Lexicon.LexiconHelpers
 
 let lexicon =

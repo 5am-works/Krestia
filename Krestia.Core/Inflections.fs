@@ -1,6 +1,6 @@
-﻿module Krestia.Parser.Inflections
+﻿module Krestia.Core.Inflections
 
-open WordType
+open Krestia.Core.Types
 
 type InflectionRule =
    | InflectionRule of WordType list * Inflection * string * WordType * bool

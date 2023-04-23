@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Krestia.Lexicon;
-using Krestia.Parser;
+using Krestia.Core;
+using Krestia.Core.Lexicon;
 using Krestia.Web.Common;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -14,19 +14,18 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.FSharp.Core;
 using Newtonsoft.Json;
+using static Krestia.Core.Lexicon.Lexicon;
 
 namespace Krestia.Functions;
 
 public static class Functions {
-   private static readonly WordIndex WordIndex = new();
-
    [FunctionName("TestFunction")]
    public static async Task<IActionResult> RunAsync(
       [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]
       HttpRequest req, ILogger log) {
       log.LogInformation("C# HTTP trigger function processed a request");
 
-      string name = req.Query["name"];
+      string? name = req.Query["name"];
 
       var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
       dynamic data = JsonConvert.DeserializeObject(requestBody);
@@ -48,12 +47,12 @@ public static class Functions {
       var decomposedResults = DecomposeWords(query);
 
       var words =
-         from word in WordIndex.AllWords.AsParallel()
+         from word in lexicon.Words
          where word.Spelling.Contains(lowercase,
                   StringComparison.InvariantCultureIgnoreCase) ||
                word.Meaning.Contains(lowercase,
                   StringComparison.InvariantCultureIgnoreCase) ||
-               word.QuantifiedMeaning?.Contains(lowercase,
+               OptionModule.ToObj(word.QuantifiedMeaning)?.Contains(lowercase,
                   StringComparison.InvariantCultureIgnoreCase) == true
          orderby Relevance(word, query)
          select new WordWithMeaning(word.Spelling, word.Meaning);
@@ -68,7 +67,7 @@ public static class Functions {
    public static IActionResult GetWord(
       [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "word/{word}")]
       HttpRequest request, string word) {
-      var result = WordIndex.Find(word);
+      var result = lexicon.Find(word);
       if (!result.HasValue) {
          return new NotFoundResult();
       }
@@ -83,7 +82,7 @@ public static class Functions {
          Route = "wordlist/alphabetical")]
       HttpRequest request) {
       var words =
-         from word in WordIndex.AllWords
+         from word in lexicon.Words
          orderby word.Spelling
          select new WordWithMeaning(word.Spelling, word.Meaning);
       return new OkObjectResult(words);
@@ -96,7 +95,7 @@ public static class Functions {
          Route = "wordlist/wordtype")]
       HttpRequest request) {
       var words =
-         from word in WordIndex.AllWords
+         from word in lexicon.Words
          group word by word.WordCategory()
          into wordType
          select wordType;
@@ -118,10 +117,10 @@ public static class Functions {
             var baseWord = decomposedWord.BaseWord;
             var steps = decomposedWord.Steps;
             var verbType = Decompose.isVerb(baseWord);
-            Word? originalWord = null;
-            if (FSharpOption<WordType.WordType>.get_IsSome(verbType)) {
+            Types.Word? originalWord = null;
+            if (OptionModule.IsSome(verbType)) {
                var stem = baseWord[..^1];
-               var normalWord = WordIndex.FindNormalFormOfVerb(stem);
+               var normalWord = lexicon.FindNormalFormOfVerb(stem);
                if (normalWord.HasValue) {
                   var normalType = Decompose.isVerb(normalWord.Value.Spelling)
                      .Value;
@@ -131,11 +130,12 @@ public static class Functions {
                }
             }
 
-            var dictionaryEntry = WordIndex.Find(baseWord);
+            var dictionaryEntry = lexicon.Find(baseWord);
             if (dictionaryEntry.HasValue || originalWord is not null) {
                decomposedResult = new DecomposedResult(word,
-                  dictionaryEntry?.Gloss ?? dictionaryEntry?.Meaning ??
-                  originalWord?.Gloss ?? originalWord?.Meaning,
+                  OptionModule.ToObj(
+                     dictionaryEntry?.Gloss ?? dictionaryEntry?.Meaning ??
+                     originalWord?.Gloss ?? originalWord?.Meaning),
                   baseWord, originalWord?.Spelling,
                   steps.Select(ResponseHelper.FormatInflectionStep).ToList());
             } else {
@@ -149,7 +149,7 @@ public static class Functions {
       }
    }
 
-   private static int Relevance(Word word, string query) {
+   private static int Relevance(Types.Word word, string query) {
       if (word.Spelling == query) return 0;
       if (word.Spelling.StartsWith(query)) return 1;
       if (word.Meaning == query) return 2;

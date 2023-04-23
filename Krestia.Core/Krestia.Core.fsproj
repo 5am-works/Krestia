@@ -7,9 +7,14 @@
 
     <ItemGroup>
         <Compile Include="Library.fs" />
-        <Compile Include="Lexicon\Types.fs" />
+        <Compile Include="Types.fs" />
         <Compile Include="Lexicon\LexiconHelpers.fs" />
+        <EmbeddedResource Include="Lexicon\lexicon.yaml" />
         <Compile Include="Lexicon\Lexicon.fs" />
+        <None Include="Lexicon\migrate.rb" />
+        <Compile Include="Phonotactics.fs" />
+        <Compile Include="Inflections.fs" />
+        <Compile Include="Decompose.fs" />
     </ItemGroup>
 
 </Project>
