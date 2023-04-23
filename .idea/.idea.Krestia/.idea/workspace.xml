@@ -13,10 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +251,7 @@
       <workItem from="1682023360711" duration="2610000" />
       <workItem from="1682202253292" duration="591000" />
       <workItem from="1682202870207" duration="2460000" />
-      <workItem from="1682216692318" duration="582000" />
+      <workItem from="1682216692318" duration="1260000" />
     </task>
     <servers />
   </component>

@@ -188,28 +188,28 @@ let lexicon =
          gloss "3P"
       }
 
-      word "todri" { meaning "parent of" }
+      word "todre" { meaning "parent of" }
 
-      word "bodri" {
+      word "bodre" {
          meaning "father of"
          expanded "todri brekal"
       }
 
-      word "gedri" {
+      word "gedre" {
          meaning "mother of"
          expanded "todri grikel"
       }
 
-      word "ligri" { meaning "name of" }
+      word "ligre" { meaning "name of" }
 
-      word "votogri" {
+      word "votogre" {
          meaning "twin of"
          example "Revi votogris Rivi" "Revi is the twin of Rivi."
          etymology (Combination [ "vora"; "tote" ])
       }
 
-      word "liredri" { meaning "eye of" }
-      word "ligri" { meaning "name of" }
+      word "liredre" { meaning "eye of" }
+      word "ligre" { meaning "name of" }
       word "pregre" { meaning "weight of" }
 
       word "literas" {
@@ -371,9 +371,9 @@ let lexicon =
          domains [ "Tatreta" ]
       }
 
-      word "Votogri" {
+      word "Votogre" {
          meaning "Gemini (zodiac)"
-         etymology (Copy "votogri")
+         etymology (Copy "votogre")
          domains [ "Tatreta" ]
       }
 

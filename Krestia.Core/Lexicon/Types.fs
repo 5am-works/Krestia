@@ -1,5 +1,7 @@
 ﻿module Krestia.Core.Lexicon.Types
 
+open System
+
 type WordType =
    | Noun
    | AssociativeNoun
@@ -85,6 +87,27 @@ let private nounEndings =
 
 let findWordTypeOf (spelling: string) =
    match spelling with
+   | "mi"
+   | "po"
+   | "vo"
+   | "no"
+   | "te"
+   | "si"
+   | "li"
+   | "so"
+   | "ke"
+   | "gi" -> Some NonTerminalDigit
+   | "mira"
+   | "pona"
+   | "vora"
+   | "nona"
+   | "tera"
+   | "sina"
+   | "lira"
+   | "sona"
+   | "kera"
+   | "gina" -> Some TerminalDigit
+   | _ when spelling.Chars 0 |> Char.IsUpper -> Some Name
    | _ when spelling.EndsWith('m') -> Some Verb0
    | _ when spelling.EndsWith('s') -> Some Verb1
    | _ when spelling.EndsWith('t') -> Some Verb12
