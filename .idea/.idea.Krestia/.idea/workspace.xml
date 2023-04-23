@@ -14,9 +14,9 @@
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Krestia.Client/wwwroot/css/bootstrap/bootstrap.min.css.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon2.fs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -48,7 +49,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Ae1wNVtufruTLN9zPOTaknYudM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -62,6 +63,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "trunk",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,9 +77,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\samofcorinth\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\samofcorinth\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\samofcorinth\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\Sam\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Sam\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Sam\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -94,7 +96,7 @@
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="0" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions)))))))))))" />
+      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions)))))))))))))" />
       <option name="PROJECT_TFM" value="net6.0" />
       <option name="FUNCTION_NAMES" value="" />
       <browser url="http://localhost:7071" />
@@ -207,6 +209,7 @@
       <item itemvalue=".NET Launch Settings Profile.Krestia.Server" />
       <item itemvalue=".NET Launch Settings Profile.Krestia.Server: IIS Express" />
       <item itemvalue=".NET Project.Kerstia.Parser.Tests" />
+      <item itemvalue="Azure Functions host.Krestia.Functions" />
       <item itemvalue="Compound.Krestia SWA" />
     </list>
   </component>
@@ -249,6 +252,9 @@
       <workItem from="1681893580986" duration="4922000" />
       <workItem from="1681938582888" duration="4622000" />
       <workItem from="1682023360711" duration="2610000" />
+      <workItem from="1682202253292" duration="591000" />
+      <workItem from="1682202870207" duration="2460000" />
+      <workItem from="1682216692318" duration="582000" />
     </task>
     <servers />
   </component>

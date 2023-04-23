@@ -41,10 +41,10 @@ type WordBuilder(spelling: string, wordType: WordType) =
    [<CustomOperation("meaning")>]
    member _.DefineMeaning((), meaning: string) = newWord spelling meaning wordType
 
-   [<CustomOperation("qualified")>]
-   member _.DefineQualifiedMeaning(word: Word, qualified: string) =
+   [<CustomOperation("quantified")>]
+   member _.DefineQuantifiedMeaning(word: Word, quantified: string) =
       { word with
-         QuantifiedMeaning = Some qualified }
+         QuantifiedMeaning = Some quantified }
 
    [<CustomOperation("gloss")>]
    member _.DefineGloss(word: Word, gloss: string) = { word with Gloss = Some gloss }
