@@ -13,30 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291a8b54-b09d-49e3-9eaa-3f5e78ad9aae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Krestia.Functions/LexiconHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krestia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Core/Krestia.Core.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Krestia.Core.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/Lexicon.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/LexiconHelpers.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Core/Lexicon/Types.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Types.fs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Krestia.Functions/Functions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/Functions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Functions/Krestia.Functions.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/Krestia.Functions.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Functions/ResponseHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Functions/ResponseHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon.Tests/Krestia.Lexicon.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Lexicon.Tests/Krestia.Lexicon.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/Krestia.Lexicon.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/Lexicon.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/LexiconLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/WordIndex.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/lexicon.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/lexicon.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Lexicon/migrate.rb" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Lexicon/migrate.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser.Tests/DecomposeTests.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser.Tests/Krestia.Parser.Tests.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser.Tests/Krestia.Parser.Tests.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser.Tests/LexiconTests.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Decompose.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Decompose.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Inflections.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Inflections.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Krestia.Parser.fsproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Parser/Krestia.Parser.fsproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/Phonotactics.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.Core/Phonotactics.fs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.Parser/WordType.fs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krestia.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Krestia.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +95,7 @@
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="0" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
-      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions))))))))))))))" />
+      <option name="PROJECT_KIND" value="RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=RunnableProjectKind(name=AzureFunctions))))))))))))))))" />
       <option name="PROJECT_TFM" value="net6.0" />
       <option name="FUNCTION_NAMES" value="" />
       <browser url="http://localhost:7071" />
@@ -274,7 +254,9 @@
       <workItem from="1682202253292" duration="591000" />
       <workItem from="1682202870207" duration="2460000" />
       <workItem from="1682216692318" duration="3792000" />
-      <workItem from="1682228605697" duration="2242000" />
+      <workItem from="1682228605697" duration="2542000" />
+      <workItem from="1682241349930" duration="20000" />
+      <workItem from="1682241473187" duration="433000" />
     </task>
     <servers />
   </component>

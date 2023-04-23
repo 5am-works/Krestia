@@ -68,11 +68,11 @@ public static class Functions {
       [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "word/{word}")]
       HttpRequest request, string word) {
       var result = lexicon.Find(word);
-      if (!result.HasValue) {
+      if (result == null) {
          return new NotFoundResult();
       }
 
-      return new OkObjectResult(result.Value.ToWordResponse());
+      return new OkObjectResult(result.ToWordResponse());
    }
 
    [FunctionName("AlphabeticalWordListFunction")]
@@ -121,17 +121,17 @@ public static class Functions {
             if (OptionModule.IsSome(verbType)) {
                var stem = baseWord[..^1];
                var normalWord = lexicon.FindNormalFormOfVerb(stem);
-               if (normalWord.HasValue) {
-                  var normalType = Decompose.isVerb(normalWord.Value.Spelling)
+               if (normalWord != null) {
+                  var normalType = Decompose.isVerb(normalWord.Spelling)
                      .Value;
                   if (Decompose.isReducedForm(verbType.Value, normalType)) {
-                     originalWord = normalWord.Value;
+                     originalWord = normalWord;
                   }
                }
             }
 
             var dictionaryEntry = lexicon.Find(baseWord);
-            if (dictionaryEntry.HasValue || originalWord is not null) {
+            if (dictionaryEntry != null || originalWord is not null) {
                decomposedResult = new DecomposedResult(word,
                   OptionModule.ToObj(
                      dictionaryEntry?.Gloss ?? dictionaryEntry?.Meaning ??
